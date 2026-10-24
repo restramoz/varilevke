@@ -73,6 +73,15 @@
                     </p>
                 </header>
 
+                @if ($article->featured_image)
+                    <div class="mb-8">
+                        <img src="{{ asset($article->featured_image) }}"
+                             alt="{{ $article->title }}"
+                             class="w-full h-auto rounded-lg border border-grid shadow-lg"
+                             loading="lazy">
+                    </div>
+                @endif
+
                 <div class="article-content article-prose" itemprop="articleBody">
                     {!! $article->content !!}
                 </div>

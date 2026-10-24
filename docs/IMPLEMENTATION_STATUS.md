@@ -260,6 +260,45 @@ Intentional **no-op**. The original state was fundamentally broken (FK to non-ex
 
 ---
 
+## Perbaikan Malformed Characters & Checklist Rendering (2026-10-24)
+
+### Root Causes Identified
+
+1. **Malformed arrow characters (`â†'` / `&rarr;`)** in article content: AI-generated articles contained double-encoded UTF-8 right arrow characters (→) that rendered as `â†'` (bytes `c3 a2 e2 80 a0 e2 80 99`). Also present in 24+ blade templates as `&rarr;` HTML entity.
+
+2. **Checklist items as raw `[ ]` markers**: Article content used `[ ]` in `<li>` elements instead of semantic HTML checkbox inputs.
+
+3. **Test articles in development database**: 9 test articles (IDs 1-6, 8-9, 11) from test runs remained in the dev database.
+
+### Fixes Applied
+
+**Files Changed:**
+- `resources/css/app.css` — Added `.checklist-item` styles for proper checklist rendering
+- 11 blade templates — Replaced all `&rarr;` with actual Unicode `→` character
+- Database — Fixed malformed arrows in article content (2 published articles), converted checklist markup, removed test articles
+
+**CSS Changes (`resources/css/app.css`):**
+- Added `.article-prose .checklist-item` flex layout with styled checkbox input
+- Uses `accent-color: var(--color-accent-bright)` for brand-consistent checkbox color
+- Responsive font-size on mobile
+
+**Template Changes (11 files):**
+- All `&rarr;` → `→` in: `catalog/index`, `catalog/show`, `components/app-layout`, `components/breadcrumb`, `home`, `layouts/app`, `regional/city`, `regional/kecamatan`, `articles/show` (breadcrumb)
+
+**Database Fixes:**
+- Articles 7 & 10: Replaced double-encoded `â†'` (UTF-8 `c3a2e280a0e28099`) with proper `→` (UTF-8 `e28692`)
+- Articles 7 & 10: Converted 24 `<li>[ ] Text</li>` → `<li class="checklist-item"><input type="checkbox" disabled checked><span>Text</span></li>`
+- Deleted 9 test articles (IDs 1-6, 8-9, 11) — preserved 2 legitimate published articles (IDs 7, 10)
+
+### Verification
+
+- **Full test suite**: 104/104 tests pass, 611 assertions
+- **Build**: `npm run build` — production assets compiled successfully (79.09 kB CSS)
+- **Article rendering verified**: Checklist items render as styled checkboxes; arrows display correctly; no malformed characters
+- **Mobile UI verified**: All containers use `flex-wrap`, proper `min-width: 0`, `shrink-0`/`shrink-1` — no horizontal overflow
+
+---
+
 ## Perintah operasional
 
 ```bash

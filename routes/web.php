@@ -95,7 +95,8 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
         ->name('cities.kecamatans');
 
     Route::resource('articles', ArticleAdminController::class)
-        ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
+        ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])
+        ->parameters(['articles' => 'article:id']);
 
     Route::resource('catalog', CatalogItemController::class)
         ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
