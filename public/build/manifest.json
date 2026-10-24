@@ -1,0 +1,69 @@
+{
+  "_fonts-Y7QUU6a2.css": {
+    "file": "assets/fonts-Y7QUU6a2.css",
+    "src": "_fonts-Y7QUU6a2.css"
+  },
+  "_ibm-plex-sans-400-normal-CDDApCn2.woff2": {
+    "file": "assets/ibm-plex-sans-400-normal-CDDApCn2.woff2",
+    "src": "_ibm-plex-sans-400-normal-CDDApCn2.woff2"
+  },
+  "_ibm-plex-sans-400-normal-CYLoc0-x.woff": {
+    "file": "assets/ibm-plex-sans-400-normal-CYLoc0-x.woff",
+    "src": "_ibm-plex-sans-400-normal-CYLoc0-x.woff"
+  },
+  "_ibm-plex-sans-500-normal-6ng42L7E.woff2": {
+    "file": "assets/ibm-plex-sans-500-normal-6ng42L7E.woff2",
+    "src": "_ibm-plex-sans-500-normal-6ng42L7E.woff2"
+  },
+  "_ibm-plex-sans-500-normal-BgVn5rGT.woff": {
+    "file": "assets/ibm-plex-sans-500-normal-BgVn5rGT.woff",
+    "src": "_ibm-plex-sans-500-normal-BgVn5rGT.woff"
+  },
+  "_ibm-plex-sans-600-normal-Cu4Hd6ag.woff": {
+    "file": "assets/ibm-plex-sans-600-normal-Cu4Hd6ag.woff",
+    "src": "_ibm-plex-sans-600-normal-Cu4Hd6ag.woff"
+  },
+  "_ibm-plex-sans-600-normal-CuJfVYMP.woff2": {
+    "file": "assets/ibm-plex-sans-600-normal-CuJfVYMP.woff2",
+    "src": "_ibm-plex-sans-600-normal-CuJfVYMP.woff2"
+  },
+  "_space-grotesk-400-normal-BnQMeOim.woff": {
+    "file": "assets/space-grotesk-400-normal-BnQMeOim.woff",
+    "src": "_space-grotesk-400-normal-BnQMeOim.woff"
+  },
+  "_space-grotesk-400-normal-CJ-V5oYT.woff2": {
+    "file": "assets/space-grotesk-400-normal-CJ-V5oYT.woff2",
+    "src": "_space-grotesk-400-normal-CJ-V5oYT.woff2"
+  },
+  "_space-grotesk-500-normal-CNSSEhBt.woff": {
+    "file": "assets/space-grotesk-500-normal-CNSSEhBt.woff",
+    "src": "_space-grotesk-500-normal-CNSSEhBt.woff"
+  },
+  "_space-grotesk-500-normal-lFbtlQH6.woff2": {
+    "file": "assets/space-grotesk-500-normal-lFbtlQH6.woff2",
+    "src": "_space-grotesk-500-normal-lFbtlQH6.woff2"
+  },
+  "_space-grotesk-700-normal-CwsQ-cCU.woff": {
+    "file": "assets/space-grotesk-700-normal-CwsQ-cCU.woff",
+    "src": "_space-grotesk-700-normal-CwsQ-cCU.woff"
+  },
+  "_space-grotesk-700-normal-RjhwGPKo.woff2": {
+    "file": "assets/space-grotesk-700-normal-RjhwGPKo.woff2",
+    "src": "_space-grotesk-700-normal-RjhwGPKo.woff2"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-k_X45UMD.css",
+    "name": "app",
+    "names": [
+      "app.css"
+    ],
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-BrhHhBPf.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}

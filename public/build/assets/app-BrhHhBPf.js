@@ -1,0 +1,1 @@
+var e=document.getElementById(`mobile-menu-toggle`),t=document.getElementById(`mobile-menu`);e&&t&&e.addEventListener(`click`,()=>{let n=t.classList.toggle(`hidden`)===!1;e.setAttribute(`aria-expanded`,n?`true`:`false`),e.setAttribute(`aria-label`,n?`Tutup menu`:`Buka menu`),e.classList.toggle(`open`,n)});
