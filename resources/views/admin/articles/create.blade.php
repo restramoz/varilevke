@@ -1,0 +1,939 @@
+@extends('admin.layout')
+
+@section('title', 'Tambah Artikel & AI Generator — Admin')
+
+@push('styles')
+<link rel="stylesheet" href="https://unpkg.com/jodit@4.1.16/es2021/jodit.min.css">
+<style>
+    .jodit-container {
+        border-radius: 10px !important;
+        border: 1px solid #1E324E !important;
+        background: #0B132B !important;
+    }
+    .jodit-toolbar__box {
+        background: #111E38 !important;
+        border-bottom: 1px solid #1E324E !important;
+    }
+    .jodit-toolbar-button__button {
+        color: #5EEAD4 !important;
+    }
+    .jodit-toolbar-button__button:hover {
+        background: #1E324E !important;
+    }
+    .jodit-workplace {
+        background: #070D18 !important;
+        color: #E2E8F0 !important;
+    }
+    .jodit-status-bar {
+        background: #111E38 !important;
+        border-top: 1px solid #1E324E !important;
+        color: #94A3B8 !important;
+    }
+    .jodit-wysiwyg {
+        background: #070D18 !important;
+        color: #E2E8F0 !important;
+        font-family: inherit !important;
+        line-height: 1.7 !important;
+        padding: 16px !important;
+        overflow-x: auto;
+    }
+    .jodit-wysiwyg table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 600px;
+        margin: 16px 0;
+    }
+    .jodit-wysiwyg th, .jodit-wysiwyg td {
+        border: 1px solid #1E324E;
+        padding: 8px 12px;
+        white-space: nowrap;
+    }
+    .jodit-wysiwyg th {
+        background: #111E38;
+        color: #5EEAD4;
+        font-weight: 700;
+    }
+    /* Fix table wrapper inside Jodit editor */
+    .jodit-wysiwyg .jodit-table {
+        overflow-x: auto;
+        width: 100%;
+    }
+</style>
+@endpush
+
+@section('content')
+<div class="space-y-6">
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-2xl font-extrabold text-regulatory-100 tracking-tight">
+                Tambah Artikel Baru
+            </h1>
+            <p class="text-xs text-muted mt-1">
+                Buat draf artikel secara manual atau menggunakan bantuan Ollama AI
+            </p>
+        </div>
+        <a href="{{ route('admin.articles.index') }}" class="px-3.5 py-2 text-xs font-bold text-regulatory-200 hover:text-accent bg-regulatory-800 border border-grid rounded-lg transition">
+            &larr; Kembali
+        </a>
+    </div>
+
+    <!-- AI Generator Card -->
+    <div class="card-k3 space-y-4">
+        <div class="panel-k3 border-b border-grid pb-3">
+            <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-teal-500/20 text-accent flex items-center justify-center font-bold text-xs border border-teal-500/50">
+                    AI
+                </span>
+                <h2 class="font-bold text-base text-regulatory-100">
+                    Ollama AI Article Generator (Pelatihan &amp; Layanan Varilevke)
+                </h2>
+                <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-regulatory-700 text-teal-300 font-bold border border-grid ml-auto">
+                    Lokal / Cloud
+                </span>
+            </div>
+        </div>
+
+        <div class="p-4 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-4">
+                <!-- Wilayah Target dengan Filter Provinsi & Pencarian -->
+                <div class="sm:col-span-6 space-y-2">
+                    <label for="ai_city_slug" class="block text-xs font-bold text-regulatory-200 uppercase tracking-wider">
+                        Wilayah Target (Kota / Kabupaten) *
+                    </label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <select id="filter_ai_province" class="w-full px-2.5 py-1.5 text-xs rounded-lg input-k3 border-grid bg-regulatory-800 focus:outline-none focus:ring-2 focus:ring-accent">
+                            <option value="">Semua Provinsi ({{ $provinces->count() }})</option>
+                            @foreach($provinces as $prov)
+                                <option value="{{ $prov }}">{{ $prov }}</option>
+                            @endforeach
+                        </select>
+                        <div class="relative">
+                            <input
+                                type="text"
+                                id="search_ai_city"
+                                placeholder="Cari kota/kab..."
+                                class="w-full pl-2.5 pr-6 py-1.5 text-xs rounded-lg input-k3 border-grid bg-regulatory-800 focus:outline-none focus:ring-2 focus:ring-accent"
+                            >
+                            <button type="button" id="btn_clear_ai_search" class="hidden absolute right-2 top-1/2 -translate-y-1/2 text-muted hover:text-regulatory-200 text-xs cursor-pointer">&times;</button>
+                        </div>
+                    </div>
+                    <select id="ai_city_slug" class="w-full px-3.5 py-2 text-xs rounded-lg input-k3 border-grid bg-regulatory-800 focus:outline-none focus:ring-2 focus:ring-accent">
+                        <option value="">-- Pilih Kota / Kabupaten --</option>
+                        @foreach($cities as $city)
+                            <option value="{{ $city->slug }}" data-id="{{ $city->id }}" data-province="{{ $city->province }}" data-name="{{ $city->name }}">
+                                {{ $city->label() }} ({{ $city->province }})
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <!-- Kecamatan Opsional -->
+                <div class="sm:col-span-6 space-y-2">
+                    <label for="ai_district_slug" class="block text-xs font-bold text-regulatory-200 uppercase tracking-wider">
+                        Kecamatan (Opsional)
+                    </label>
+                    <select id="ai_district_slug" class="w-full px-3.5 py-2 text-xs rounded-lg input-k3 border-grid bg-regulatory-800 focus:outline-none focus:ring-2 focus:ring-accent" disabled>
+                        <option value="">-- Pilih Kota terlebih dahulu --</option>
+                    </select>
+                    <p id="ai_kecamatan_feedback" class="text-[10px] text-muted"></p>
+                </div>
+
+                <!-- Program Pelatihan / Layanan Target -->
+                <div class="sm:col-span-6 space-y-2">
+                    <label for="ai_service_slug" class="block text-xs font-bold text-regulatory-200 uppercase tracking-wider">
+                        Katalog Target Pelatihan / Layanan (Opsional)
+                    </label>
+                    <select id="ai_service_slug" class="w-full px-3.5 py-2 text-xs rounded-lg input-k3 border-grid bg-regulatory-800 focus:outline-none focus:ring-2 focus:ring-accent">
+                        <option value="">-- Umum (Pilihan Otomatis) --</option>
+                        @foreach($catalogItems as $item)
+                            <option value="{{ $item->slug }}" data-id="{{ $item->id }}" data-category="{{ $item->category }}">
+                                {{ $item->name }} ({{ ucfirst($item->category) }})
+                            </option>
+                        @endforeach
+                    </select>
+                    <p class="text-[10px] text-muted">Bila dipilih, materi artikel terkonsentrasi pada kompetensi spesifik katalog ini.</p>
+                </div>
+
+                <!-- Target Word Count -->
+                <div class="sm:col-span-3 space-y-2">
+                    <label for="ai_word_count" class="block text-xs font-bold text-regulatory-200 mb-1 uppercase tracking-wider">
+                        Target Jumlah Kata *
+                    </label>
+                    <input
+                        type="number"
+                        id="ai_word_count"
+                        name="ai_word_count"
+                        value="8000"
+                        min="6000"
+                        max="10000"
+                        step="500"
+                        class="w-full px-3.5 py-2 text-xs rounded-lg input-k3 border-grid bg-regulatory-800 focus:outline-none focus:ring-2 focus:ring-accent"
+                        required
+                    >
+                    <p class="text-[10px] text-muted">Batas Varilevke: 6.000–10.000 kata (default: 8.000).</p>
+                </div>
+
+                <!-- Topik Kustom Opsional -->
+                <div class="sm:col-span-3 space-y-2">
+                    <label for="ai_topic" class="block text-xs font-bold text-regulatory-200 mb-1 uppercase tracking-wider">
+                        Topik Khusus (Opsional)
+                    </label>
+                    <input
+                        type="text"
+                        id="ai_topic"
+                        placeholder="Kosongkan untuk otomatis"
+                        class="w-full px-3.5 py-2 text-xs rounded-lg input-k3 border-grid bg-regulatory-800 focus:outline-none focus:ring-2 focus:ring-accent"
+                    >
+                    <p class="text-[10px] text-muted">Otomatis dipilih dari katalog + wilayah bila kosong.</p>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-3 border-t border-grid">
+                <p class="text-[11px] text-muted">
+                    Menghasilkan: judul, slug, konten HTML semantik, ringkasan, FAQ, dan image brief Google Flow.
+                </p>
+                <button
+                    type="button"
+                    id="btn-generate-ai"
+                    class="btn-primary text-xs shrink-0 inline-flex items-center gap-2 cursor-pointer"
+                >
+                    <svg id="ai-spinner" class="hidden w-3.5 h-3.5 animate-spin mr-1" viewBox="0 0 24 24" fill="none">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+                    </svg>
+                    <span id="ai-btn-text">Generate dengan AI</span>
+                </button>
+            </div>
+
+            <div id="ai-error-box" class="hidden p-3 rounded-lg bg-red-950/40 border border-red-700/60 text-xs text-red-300"></div>
+        </div>
+    </div>
+
+    <!-- Structured Image Brief Display (Google Flow Prompt) -->
+    <div id="image-brief-container" class="hidden card-k3 bg-emerald-950/20 border-emerald-800/40 space-y-3 p-5">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <h3 class="font-bold text-sm text-emerald-300">
+                    Image Brief &amp; Prompt Google Flow (Terpisah dari Konten Publik)
+                </h3>
+            </div>
+            <span class="text-[10px] font-bold text-emerald-300 bg-emerald-900/40 border border-emerald-700/50 px-2.5 py-0.5 rounded-full">
+                Aspek Rasio: 16:9
+            </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div>
+                <span class="font-bold text-emerald-300 block mb-0.5">Konsep Visual:</span>
+                <p id="brief-concept" class="text-emerald-100 bg-regulatory-900 p-2.5 rounded-lg border border-emerald-900/50 leading-relaxed"></p>
+            </div>
+            <div>
+                <span class="font-bold text-emerald-300 block mb-0.5">Rekomendasi Alt Text:</span>
+                <p id="brief-alt" class="text-emerald-100 bg-regulatory-900 p-2.5 rounded-lg border border-emerald-900/50 leading-relaxed"></p>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-xs text-emerald-300">English Prompt Siap Salin ke Google Flow:</span>
+                <button type="button" id="btn-copy-prompt" class="text-[11px] font-bold text-regulatory-950 bg-emerald-400 hover:bg-emerald-300 px-3 py-1 rounded-md transition inline-flex items-center gap-1 cursor-pointer">
+                    <span id="copy-text">Salin Prompt Google Flow</span>
+                </button>
+            </div>
+            <textarea id="brief-english-prompt" rows="3" readonly class="w-full text-xs font-mono p-3 bg-regulatory-900 border border-emerald-800/40 rounded-lg text-emerald-100 focus:outline-none"></textarea>
+            <p class="text-[11px] text-emerald-400/80 mt-1">
+                * Buat gambar di Google Flow menggunakan prompt di atas, lalu unggah file gambar melalui kolom "Gambar Unggulan (Featured Image)" di bawah.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Editor & Live Preview Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <!-- Left: Form Input -->
+        <div class="lg:col-span-7 space-y-5">
+            <form id="article-form" method="POST" action="{{ route('admin.articles.store') }}" enctype="multipart/form-data">
+                @csrf
+
+                <!-- Hidden inputs for image brief & faqs JSON -->
+                <input type="hidden" name="image_brief" id="hidden_image_brief" value="{{ is_array(old('image_brief')) ? json_encode(old('image_brief')) : old('image_brief') }}">
+                <input type="hidden" name="faqs" id="hidden_faqs" value="{{ is_array(old('faqs')) ? json_encode(old('faqs')) : old('faqs') }}">
+                <input type="hidden" name="catalog_item_id" id="hidden_catalog_item_id" value="{{ old('catalog_item_id') }}">
+                <input type="hidden" name="city_id" id="hidden_city_id" value="{{ old('city_id') }}">
+                <input type="hidden" name="kecamatan_id" id="hidden_kecamatan_id" value="{{ old('kecamatan_id') }}">
+
+                <div class="card-k3 space-y-4 p-6">
+                    <!-- Judul -->
+                    <div>
+                        <label for="title" class="block text-xs font-bold text-regulatory-200 mb-1 uppercase tracking-wider">
+                            Judul Artikel *
+                        </label>
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            required
+                            value="{{ old('title') }}"
+                            placeholder="Contoh: Penerapan Rencana Keselamatan Konstruksi di Surabaya"
+                            class="w-full px-3.5 py-2.5 text-sm font-bold rounded-lg input-k3 border-grid focus:outline-none focus:ring-2 focus:ring-accent"
+                        >
+                    </div>
+
+                    <!-- Slug URL -->
+                    <div>
+                        <label for="slug" class="block text-xs font-bold text-regulatory-200 mb-1 uppercase tracking-wider">
+                            Slug URL
+                        </label>
+                        <input
+                            type="text"
+                            id="slug"
+                            name="slug"
+                            value="{{ old('slug') }}"
+                            placeholder="penerapan-rencana-keselamatan-konstruksi..."
+                            class="w-full px-3.5 py-2 text-xs font-mono rounded-lg input-k3 border-grid bg-regulatory-800 focus:outline-none focus:ring-2 focus:ring-accent"
+                        >
+                    </div>
+
+                    <!-- Target Wilayah Selector with Province Filter & Search -->
+                    <div class="p-3.5 rounded-xl bg-regulatory-800 border border-grid space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <label for="target_city_slug" class="block text-xs font-bold text-regulatory-200 uppercase tracking-wider">
+                                Tautkan ke Wilayah (Kota / Kabupaten)
+                            </label>
+                            <span class="text-[10px] text-muted">Kosongkan jika skala nasional</span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <div>
+                                <label for="filter_target_province" class="block text-[11px] text-muted mb-1">Filter Provinsi</label>
+                                <select id="filter_target_province" class="w-full px-2.5 py-1.5 text-xs rounded-lg input-k3 border-grid bg-regulatory-700 focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <option value="">Semua Provinsi ({{ $provinces->count() }})</option>
+                                    @foreach($provinces as $prov)
+                                        <option value="{{ $prov }}">{{ $prov }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div>
+                                <label for="search_target_city" class="block text-[11px] text-muted mb-1">Cari Nama Kota / Kabupaten</label>
+                                <div class="relative">
+                                    <input
+                                        type="text"
+                                        id="search_target_city"
+                                        placeholder="Ketik nama kota, misal: Surabaya..."
+                                        class="w-full pl-2.5 pr-6 py-1.5 text-xs rounded-lg input-k3 border-grid bg-regulatory-700 focus:outline-none focus:ring-2 focus:ring-accent"
+                                    >
+                                    <button type="button" id="btn_clear_target_search" class="hidden absolute right-2 top-1/2 -translate-y-1/2 text-muted hover:text-regulatory-200 text-xs cursor-pointer">&times;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <select id="target_city_slug" name="target_city_slug" class="w-full px-3 py-2 text-xs rounded-lg input-k3 border-grid bg-regulatory-700 focus:outline-none focus:ring-2 focus:ring-accent">
+                                <option value="">-- Nasional / Tanpa Wilayah Tertentu --</option>
+                                @foreach($cities as $city)
+                                    <option
+                                        value="{{ $city->slug }}"
+                                        data-id="{{ $city->id }}"
+                                        data-province="{{ $city->province }}"
+                                        data-name="{{ $city->name }}"
+                                        {{ old('target_city_slug') === $city->slug ? 'selected' : '' }}
+                                    >
+                                        {{ $city->label() }} ({{ $city->province }})
+                                    </option>
+                                @endforeach
+                            </select>
+                            <p id="target_city_feedback" class="text-[10px] text-muted mt-1"></p>
+                        </div>
+                    </div>
+
+                    <!-- Ringkasan / Excerpt -->
+                    <div>
+                        <label for="excerpt" class="block text-xs font-bold text-regulatory-200 mb-1 uppercase tracking-wider">
+                            Ringkasan / Excerpt
+                        </label>
+                        <textarea
+                            id="excerpt"
+                            name="excerpt"
+                            rows="2"
+                            placeholder="Ringkasan eksekutif 2-3 kalimat mengenai pokok bahasan artikel..."
+                            class="w-full px-3.5 py-2 text-xs rounded-lg input-k3 border-grid focus:outline-none focus:ring-2 focus:ring-accent"
+                        >{{ old('excerpt') }}</textarea>
+                    </div>
+
+                    <!-- Featured Image Upload -->
+                    <div>
+                        <label for="featured_image" class="block text-xs font-bold text-regulatory-200 mb-1 uppercase tracking-wider">
+                            Gambar Unggulan (Featured Image)
+                        </label>
+                        <input
+                            type="file"
+                            id="featured_image"
+                            name="featured_image"
+                            accept="image/jpeg,image/png,image/webp"
+                            class="w-full text-xs text-muted file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-bold file:bg-regulatory-800 file:text-accent hover:file:bg-regulatory-700 file:transition cursor-pointer"
+                        >
+                        <p class="text-[11px] text-muted mt-1">
+                            Format diizinkan: JPG, PNG, WebP (Maks. 5MB). SVG ditolak demi keamanan.
+                        </p>
+                    </div>
+
+                    <!-- Jodit Editor -->
+                    <div>
+                        <label for="content_editor" class="block text-xs font-bold text-regulatory-200 mb-1 uppercase tracking-wider">
+                            Konten Artikel (HTML) *
+                        </label>
+                        <textarea id="content_editor" name="content">{{ old('content') }}</textarea>
+                    </div>
+
+                    <!-- SEO Fields -->
+                    <div class="border-t border-grid pt-4 space-y-3">
+                        <span class="text-xs font-bold text-regulatory-200 block uppercase tracking-wider">
+                            Optimasi Mesin Pencari (SEO)
+                        </span>
+                        <div>
+                            <label for="seo_title" class="block text-[11px] text-muted mb-0.5">SEO Title (Max 60 Karakter)</label>
+                            <input
+                                type="text"
+                                id="seo_title"
+                                name="seo_title"
+                                value="{{ old('seo_title') }}"
+                                class="w-full px-3 py-1.5 text-xs rounded-lg input-k3 border-grid focus:outline-none focus:ring-2 focus:ring-accent"
+                            >
+                        </div>
+                        <div>
+                            <label for="meta_description" class="block text-[11px] text-muted mb-0.5">Meta Description (Max 155 Karakter)</label>
+                            <textarea
+                                id="meta_description"
+                                name="meta_description"
+                                rows="2"
+                                class="w-full px-3 py-1.5 text-xs rounded-lg input-k3 border-grid focus:outline-none focus:ring-2 focus:ring-accent"
+                            >{{ old('meta_description') }}</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Status & Submit -->
+                    <div class="border-t border-grid pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div>
+                            <label for="status" class="block text-xs font-bold text-regulatory-200 mb-1 uppercase tracking-wider">
+                                Status Publikasi
+                            </label>
+                            <select id="status" name="status" class="px-3 py-1.5 text-xs rounded-lg input-k3 border-grid bg-regulatory-800">
+                                <option value="draft" {{ old('status', 'draft') === 'draft' ? 'selected' : '' }}>Simpan sebagai Draft</option>
+                                <option value="published" {{ old('status') === 'published' ? 'selected' : '' }}>Publikasikan Langsung</option>
+                            </select>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <button
+                                type="submit"
+                                name="action"
+                                value="draft"
+                                onclick="document.getElementById('status').value='draft'"
+                                class="px-4 py-2 text-xs font-bold text-regulatory-200 bg-regulatory-800 border border-grid hover:bg-regulatory-700 rounded-lg transition cursor-pointer"
+                            >
+                                Simpan Draf
+                            </button>
+                            <button
+                                type="submit"
+                                name="action"
+                                value="published"
+                                onclick="document.getElementById('status').value='published'"
+                                class="btn-primary text-xs shadow-sm transition cursor-pointer"
+                            >
+                                Publikasikan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right: Real-time Live Preview (Tanpa Simpan) -->
+        <div class="lg:col-span-5 sticky top-24 space-y-4">
+            <div class="card-k3 p-5 rounded-2xl border border-grid shadow-sm space-y-3">
+                <div class="flex items-center justify-between border-b border-grid pb-2">
+                    <span class="text-xs font-extrabold uppercase tracking-wider text-accent">
+                        PREVIEW LANGSUNG (REAL-TIME)
+                    </span>
+                    <span class="text-[10px] text-muted bg-regulatory-800 px-2 py-0.5 rounded-full border border-grid">
+                        Tanpa Menyimpan
+                    </span>
+                </div>
+
+                <!-- Featured Image Preview -->
+                <div id="preview-image-box" class="hidden rounded-xl overflow-hidden border border-grid max-h-48 bg-regulatory-950">
+                    <img id="preview-image-tag" src="" alt="Featured preview" class="w-full h-44 object-cover">
+                </div>
+
+                <!-- Title & Excerpt Preview -->
+                <div class="space-y-2">
+                    <h2 id="preview-title" class="font-bold text-lg text-regulatory-100 leading-snug">
+                        (Judul artikel akan muncul di sini)
+                    </h2>
+                    <p id="preview-excerpt" class="text-xs text-regulatory-300 leading-relaxed italic bg-regulatory-800 p-3 rounded-lg border-l-4 border-accent">
+                        (Ringkasan excerpt akan tampil di sini)
+                    </p>
+                </div>
+
+                <div class="h-px bg-grid"></div>
+
+                <!-- Content Body Preview -->
+                <div class="space-y-2">
+                    <span class="text-[10px] font-bold text-muted uppercase tracking-wider block">
+                        Isi Konten Artikel
+                    </span>
+                    <div id="preview-content" class="prose prose-invert max-w-none text-xs text-regulatory-200 leading-relaxed max-h-[500px] overflow-y-auto p-4 rounded-xl bg-regulatory-800 border border-grid">
+                        <p class="text-muted italic">Mulai mengetik atau gunakan tombol "Generate dengan AI" untuk melihat pratinjau konten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+@push('scripts')
+<script src="https://unpkg.com/jodit@4.1.16/es2021/jodit.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // 1. Inisialisasi Jodit Editor
+    const editor = Jodit.make('#content_editor', {
+        placeholder: 'Tulis konten artikel edukasi atau panduan teknis di sini...',
+        height: 480,
+        toolbarAdaptive: false,
+        theme: 'dark',
+        uploader: {
+            url: '{{ route('admin.articles.upload-image') }}',
+            format: 'json',
+            fieldName: 'image',
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                'Accept': 'application/json'
+            },
+            isSuccess: function (resp) {
+                return resp && resp.success === true;
+            },
+            process: function (resp) {
+                return {
+                    files: resp.files || [resp.url],
+                    path: resp.url,
+                    baseurl: '',
+                    error: resp.message || '',
+                    msg: resp.message || ''
+                };
+            },
+            error: function (e) {
+                alert('Gagal mengunggah gambar: ' + (e.message || JSON.stringify(e)));
+            }
+        }
+    });
+
+    // 2. Real-time Live Preview synchronization
+    const titleInput = document.getElementById('title');
+    const slugInput = document.getElementById('slug');
+    const excerptInput = document.getElementById('excerpt');
+    const featuredImageInput = document.getElementById('featured_image');
+
+    const previewTitle = document.getElementById('preview-title');
+    const previewExcerpt = document.getElementById('preview-excerpt');
+    const previewContent = document.getElementById('preview-content');
+    const previewImageBox = document.getElementById('preview-image-box');
+    const previewImageTag = document.getElementById('preview-image-tag');
+
+    function syncLivePreview() {
+        previewTitle.textContent = titleInput.value.trim() || '(Judul artikel akan muncul di sini)';
+        previewExcerpt.textContent = excerptInput.value.trim() || '(Ringkasan excerpt akan tampil di sini)';
+
+        const html = editor.value;
+        if (html && html.trim() !== '') {
+            previewContent.innerHTML = html;
+        } else {
+            previewContent.innerHTML = '<p class="text-muted italic">Mulai mengetik atau gunakan tombol "Generate dengan AI" untuk melihat pratinjau konten.</p>';
+        }
+    }
+
+    titleInput.addEventListener('input', function () {
+        if (!slugInput.value || slugInput.dataset.touched !== 'true') {
+            slugInput.value = titleInput.value
+                .toLowerCase()
+                .trim()
+                .replace(/[^a-z0-9\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-');
+        }
+        syncLivePreview();
+    });
+
+    slugInput.addEventListener('input', function () {
+        slugInput.dataset.touched = 'true';
+    });
+
+    excerptInput.addEventListener('input', syncLivePreview);
+    editor.events.on('change', syncLivePreview);
+
+    // Featured image preview via FileReader
+    if (featuredImageInput) {
+        featuredImageInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    previewImageTag.src = e.target.result;
+                    previewImageBox.classList.remove('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+
+    // Helper: combined province filter and search for city select
+    function setupCitySelector(config) {
+        const provinceSelect = document.getElementById(config.provinceSelectId);
+        const searchInput = document.getElementById(config.searchInputId);
+        const citySelect = document.getElementById(config.citySelectId);
+        const clearBtn = config.clearBtnId ? document.getElementById(config.clearBtnId) : null;
+        const feedbackEl = config.feedbackElId ? document.getElementById(config.feedbackElId) : null;
+
+        if (!citySelect) return { setSelected: function () {} };
+
+        const defaultOption = citySelect.options[0] ? {
+            value: citySelect.options[0].value,
+            text: citySelect.options[0].textContent
+        } : null;
+
+        const allOptions = [];
+        for (let i = (defaultOption ? 1 : 0); i < citySelect.options.length; i++) {
+            const opt = citySelect.options[i];
+            allOptions.push({
+                value: opt.value,
+                text: opt.textContent,
+                id: opt.getAttribute('data-id'),
+                province: (opt.getAttribute('data-province') || '').toLowerCase().trim(),
+                name: (opt.getAttribute('data-name') || opt.textContent).toLowerCase().trim(),
+                rawProvince: opt.getAttribute('data-province') || '',
+                rawName: opt.getAttribute('data-name') || opt.textContent
+            });
+        }
+
+        let selectedValue = citySelect.value;
+
+        function applyFilter() {
+            const selectedProv = provinceSelect ? provinceSelect.value.toLowerCase().trim() : '';
+            const keyword = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+            if (clearBtn) {
+                clearBtn.classList.toggle('hidden', !keyword);
+            }
+
+            const filtered = allOptions.filter(function (item) {
+                const matchProv = !selectedProv || item.province === selectedProv;
+                const matchSearch = !keyword || item.name.includes(keyword) || item.text.toLowerCase().includes(keyword);
+                return matchProv && matchSearch;
+            });
+
+            citySelect.innerHTML = '';
+            if (defaultOption) {
+                const defOpt = document.createElement('option');
+                defOpt.value = defaultOption.value;
+                defOpt.textContent = defaultOption.text;
+                citySelect.appendChild(defOpt);
+            }
+
+            let hasSelectedInFiltered = false;
+            filtered.forEach(function (item) {
+                const opt = document.createElement('option');
+                opt.value = item.value;
+                opt.textContent = item.text;
+                opt.setAttribute('data-id', item.id);
+                opt.setAttribute('data-province', item.rawProvince);
+                opt.setAttribute('data-name', item.rawName);
+                if (item.value === selectedValue) {
+                    opt.selected = true;
+                    hasSelectedInFiltered = true;
+                }
+                citySelect.appendChild(opt);
+            });
+
+            if (selectedValue && !hasSelectedInFiltered) {
+                const currentItem = allOptions.find(function (item) { return item.value === selectedValue; });
+                if (currentItem) {
+                    const preservedOpt = document.createElement('option');
+                    preservedOpt.value = currentItem.value;
+                    preservedOpt.textContent = currentItem.text + ' (Sedang Dipilih)';
+                    preservedOpt.setAttribute('data-id', currentItem.id);
+                    preservedOpt.setAttribute('data-province', currentItem.rawProvince);
+                    preservedOpt.setAttribute('data-name', currentItem.rawName);
+                    preservedOpt.selected = true;
+                    citySelect.appendChild(preservedOpt);
+                }
+            }
+
+            if (feedbackEl) {
+                if (keyword || selectedProv) {
+                    feedbackEl.textContent = 'Menampilkan ' + filtered.length + ' dari ' + allOptions.length + ' kota/kabupaten';
+                } else {
+                    feedbackEl.textContent = 'Total ' + allOptions.length + ' kota/kabupaten terdaftar';
+                }
+            }
+        }
+
+        citySelect.addEventListener('change', function () {
+            selectedValue = this.value;
+        });
+
+        if (provinceSelect) {
+            provinceSelect.addEventListener('change', applyFilter);
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('input', applyFilter);
+        }
+
+        if (clearBtn) {
+            clearBtn.addEventListener('click', function () {
+                searchInput.value = '';
+                applyFilter();
+                searchInput.focus();
+            });
+        }
+
+        applyFilter();
+
+        return {
+            setSelected: function (val) {
+                selectedValue = val;
+                applyFilter();
+                citySelect.value = val;
+            }
+        };
+    }
+
+    const aiCitySelector = setupCitySelector({
+        provinceSelectId: 'filter_ai_province',
+        searchInputId: 'search_ai_city',
+        citySelectId: 'ai_city_slug',
+        clearBtnId: 'btn_clear_ai_search'
+    });
+
+    const targetCitySelector = setupCitySelector({
+        provinceSelectId: 'filter_target_province',
+        searchInputId: 'search_target_city',
+        citySelectId: 'target_city_slug',
+        clearBtnId: 'btn_clear_target_search',
+        feedbackElId: 'target_city_feedback'
+    });
+
+    // Kecamatan loader for AI city selection
+    const aiCitySelect = document.getElementById('ai_city_slug');
+    const aiDistrictSelect = document.getElementById('ai_district_slug');
+    const aiKecamatanFeedback = document.getElementById('ai_kecamatan_feedback');
+
+    async function loadKecamatan(citySlug) {
+        if (!citySlug) {
+            aiDistrictSelect.innerHTML = '<option value="">-- Pilih Kota terlebih dahulu --</option>';
+            aiDistrictSelect.disabled = true;
+            aiKecamatanFeedback.textContent = '';
+            return;
+        }
+
+        aiDistrictSelect.innerHTML = '<option value="">Memuat kecamatan...</option>';
+        aiDistrictSelect.disabled = true;
+
+        try {
+            const url = '{{ route('admin.cities.kecamatans', ['city' => 'PLACEHOLDER']) }}'.replace('PLACEHOLDER', citySlug);
+            const response = await fetch(url, { headers: { 'Accept': 'application/json' } });
+            const list = await response.json();
+
+            aiDistrictSelect.innerHTML = '<option value="">-- Semua Kecamatan (Cakup Penuh Kota) --</option>';
+            list.forEach(function (k) {
+                const opt = document.createElement('option');
+                opt.value = k.slug || k.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                opt.setAttribute('data-id', k.id);
+                opt.textContent = k.name;
+                aiDistrictSelect.appendChild(opt);
+            });
+            aiDistrictSelect.disabled = false;
+            aiKecamatanFeedback.textContent = list.length + ' kecamatan terdaftar';
+        } catch (e) {
+            aiDistrictSelect.innerHTML = '<option value="">Gagal memuat data kecamatan</option>';
+            aiDistrictSelect.disabled = true;
+        }
+    }
+
+    aiCitySelect.addEventListener('change', function () {
+        loadKecamatan(this.value);
+    });
+
+    // Synchronize form submit
+    const form = document.getElementById('article-form');
+    if (form) {
+        form.addEventListener('submit', function () {
+            if (editor) {
+                document.getElementById('content_editor').value = editor.value;
+            }
+            const selCity = document.getElementById('target_city_slug');
+            const cityOpt = selCity.options[selCity.selectedIndex];
+            if (cityOpt && cityOpt.dataset.id) {
+                document.getElementById('hidden_city_id').value = cityOpt.dataset.id;
+            }
+        });
+    }
+
+    // 3. Ollama AI Generator Execution
+    const btnGenerate = document.getElementById('btn-generate-ai');
+    const spinner = document.getElementById('ai-spinner');
+    const btnText = document.getElementById('ai-btn-text');
+    const errorBox = document.getElementById('ai-error-box');
+
+    const imageBriefContainer = document.getElementById('image-brief-container');
+    const briefConcept = document.getElementById('brief-concept');
+    const briefAlt = document.getElementById('brief-alt');
+    const briefEnglishPrompt = document.getElementById('brief-english-prompt');
+    const hiddenImageBrief = document.getElementById('hidden_image_brief');
+    const hiddenFaqs = document.getElementById('hidden_faqs');
+    const hiddenCatalogItemId = document.getElementById('hidden_catalog_item_id');
+    const hiddenCityId = document.getElementById('hidden_city_id');
+    const hiddenKecamatanId = document.getElementById('hidden_kecamatan_id');
+
+    let currentCitySlug = null;
+
+    function populateForm(data) {
+        titleInput.value = data.title || '';
+        slugInput.value = data.slug || '';
+        excerptInput.value = data.excerpt || '';
+
+        if (currentCitySlug) {
+            targetCitySelector.setSelected(currentCitySlug);
+        }
+
+        if (data.seo_title) {
+            document.getElementById('seo_title').value = data.seo_title;
+        }
+        if (data.meta_description) {
+            document.getElementById('meta_description').value = data.meta_description;
+        }
+
+        editor.value = data.content || '';
+        document.getElementById('content_editor').value = data.content || '';
+
+        if (data.image_brief) {
+            briefConcept.textContent = data.image_brief.concept || '-';
+            briefAlt.textContent = data.image_brief.recommended_alt || '-';
+            briefEnglishPrompt.value = data.image_brief.english_prompt || '';
+            imageBriefContainer.classList.remove('hidden');
+            hiddenImageBrief.value = JSON.stringify(data.image_brief);
+        }
+
+        if (data.suggested_faqs || data.faqs) {
+            const faqs = data.suggested_faqs || data.faqs;
+            hiddenFaqs.value = JSON.stringify(faqs);
+        }
+
+        if (data.catalog_item_id) {
+            hiddenCatalogItemId.value = data.catalog_item_id;
+        }
+        if (data.city_id) {
+            hiddenCityId.value = data.city_id;
+        }
+        if (data.kecamatan_id) {
+            hiddenKecamatanId.value = data.kecamatan_id;
+        }
+
+        syncLivePreview();
+    }
+
+    btnGenerate.addEventListener('click', async function () {
+        const citySlug = aiCitySelect.value;
+        const districtSlug = aiDistrictSelect.value;
+        const serviceSelect = document.getElementById('ai_service_slug');
+        const serviceSlug = serviceSelect ? serviceSelect.value : null;
+        const wordCount = document.getElementById('ai_word_count').value;
+        const customTopic = document.getElementById('ai_topic').value;
+
+        if (!citySlug && !serviceSlug && !customTopic) {
+            alert('Silakan pilih Wilayah Target atau Katalog Layanan terlebih dahulu.');
+            aiCitySelect.focus();
+            return;
+        }
+
+        const wc = parseInt(wordCount, 10);
+        if (isNaN(wc) || wc < 6000 || wc > 10000) {
+            alert('Target jumlah kata harus antara 6.000 dan 10.000 (default: 8.000).');
+            document.getElementById('ai_word_count').focus();
+            return;
+        }
+
+        currentCitySlug = citySlug;
+
+        btnGenerate.disabled = true;
+        spinner.classList.remove('hidden');
+        btnText.textContent = 'Menghasilkan dengan Ollama...';
+        errorBox.classList.add('hidden');
+
+        try {
+            const res = await fetch('{{ route('admin.articles.ai-generate') }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    city_slug: citySlug || null,
+                    district_slug: districtSlug || null,
+                    service_slug: serviceSlug || null,
+                    word_count: wc,
+                    topic: customTopic || null
+                })
+            });
+
+            const data = await res.json();
+
+            if (!res.ok || !data.success) {
+                const errorMsg = data.error || data.message || 'Gagal menghasilkan artikel dari Ollama.';
+                errorBox.textContent = errorMsg;
+                errorBox.classList.remove('hidden');
+                return;
+            }
+
+            populateForm(data);
+            alert('Artikel berhasil dihasilkan oleh Ollama AI. Silakan tinjau draf pada editor dan live preview, lalu klik Simpan.');
+
+        } catch (err) {
+            errorBox.textContent = 'Terjadi kesalahan koneksi atau jaringan ke server: ' + err.message;
+            errorBox.classList.remove('hidden');
+        } finally {
+            btnGenerate.disabled = false;
+            spinner.classList.add('hidden');
+            btnText.textContent = 'Generate dengan AI';
+        }
+    });
+
+    // Copy Prompt Button
+    const btnCopyPrompt = document.getElementById('btn-copy-prompt');
+    const copyText = document.getElementById('copy-text');
+
+    if (btnCopyPrompt && briefEnglishPrompt) {
+        btnCopyPrompt.addEventListener('click', function () {
+            if (!briefEnglishPrompt.value) return;
+
+            navigator.clipboard.writeText(briefEnglishPrompt.value).then(function () {
+                copyText.textContent = 'Berhasil Disalin!';
+                setTimeout(function () {
+                    copyText.textContent = 'Salin Prompt Google Flow';
+                }, 2000);
+            }).catch(function () {
+                briefEnglishPrompt.select();
+                document.execCommand('copy');
+                copyText.textContent = 'Berhasil Disalin!';
+                setTimeout(function () {
+                    copyText.textContent = 'Salin Prompt Google Flow';
+                }, 2000);
+            });
+        });
+    }
+
+    syncLivePreview();
+});
+</script>
+@endpush

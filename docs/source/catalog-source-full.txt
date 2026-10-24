@@ -1,0 +1,273 @@
+001. Ahli K3 Umum
+002. Confined Space Madya
+003. Confined Space Utama
+004. Confined Space Rescue
+005. Auditor SMK3
+006. Operator Forklift Kelas 1
+007. Operator Forklift Kelas 2
+008. Operator Forklift Kelas 3
+009. SIO Operator Alat Berat
+010. SIO Excavator
+011. SIO Bulldozer
+012. SIO Vibro
+013. SIO Dump Truck
+014. SIO Wheel Loader
+015. SIO Motor Grader
+016. SIO Compactor
+017. SIO Telehandler
+018. SIO Rig Drilling
+019. Drilling Machine
+020. Mekanik Drilling
+021. Perawatan Sumur Drilling
+022. Operator Menara Drilling
+023. Workover Drilling
+024. Operator Trailer
+025. Lifting
+026. TOT (Train of Trainer)
+027. Mining Training
+028. Kelistrikan
+029. Teknisi Instrumentasi
+030. Reklamasi Pertambangan
+031. Teknisi Survei (Juru Ukur)
+032. Telekomunikasi
+033. Bekerja di Ketinggian
+034. Operator Gondola
+035. Dasar K3
+036. MEP (Mechanical Electrical Plumbing)
+037. Operator Lifter
+038. Operator Manlift
+039. Operator Boomlift
+040. Operator Skylift
+041. Operator Scissor Lift
+042. Operator Pallet Mover
+043. Operator Liftstacker
+044. Operator Reachstacker
+045. Operator Tower Crane
+046. Overhead Crane
+047. Mobile Crane
+048. Pedestal Crane
+049. Operator Pita Transport (Conveyor)
+050. Basic First Aid
+051. Basic Fire Fighting
+052. Rigger (Juru Ikat)
+053. Asisten Rigger
+054. Operator K3 Cargo Hoist Crane Kelas 3 (Lift Barang)
+055. Pesawat Angkat & Pesawat Angkut (PAPA)
+056. Lift
+057. Eskalator
+058. Elevator
+059. Operator Genset
+060. Turbin Uap & Gas
+061. Operator Mesin Produksi & Perkakas
+062. Operator Tanur
+063. Operator Pesawat Tenaga & Produksi (PTP)
+064. Pesawat Uap Boiler Kelas 1
+065. Pesawat Uap Boiler Kelas 2
+066. Teknisi Bejana Tekan & Tangki Timbun
+067. Ahli Bejana Tekan & Tangki Timbun
+068. Petugas P3K
+069. Gantry Crane
+070. First Aider
+071. K3 Rumah Sakit
+072. Hiperkes Paramedic / Perawat
+073. HIPERKES DOKTER
+074. K3 Kebakaran DAMKAR DCBA
+075. Ahli K3 Kimia
+076. Petugas K3 Kimia
+077. Truck Crane
+078. Operator Dongkrak
+079. Ahli K3 Muda Lingkungan Kerja
+080. K3 Ruang Terbatas
+081. Teknisi K3 Listrik
+082. Ahli K3 Listrik
+083. Kelistrikan Gedung
+084. Kelistrikan Kendaraan
+085. Manajemen Gudang
+086. K3 Konstruksi Muda
+087. K3 Konstruksi Madya
+088. K3 Konstruksi Utama
+089. Perancah (Scaffolding)
+090. Juru Las (Welder)
+091. Tenaga Kerja Bangunan Tinggi (TKBT) Tingkat 1
+092. Tenaga Kerja Bangunan Tinggi (TKBT) Tingkat 2
+093. Tenaga Kerja Pada Ketinggian (TKPK) Tingkat 1
+094. Tenaga Kerja Pada Ketinggian (TKPK) Tingkat 2
+095. WAH (Working at Height)
+096. Pipe Fitter
+097. Welder GMAW
+098. Welder FCAW
+099. Welder GTAW
+100. Welder SMAW
+101. H2S
+102. JSA (Job Safety Analysis)
+103. ERGONOMI
+104. PERMIT TO WORK
+105. Safety Officer
+106. HACCP (Hazard Analysis Critical Control Point)
+107. HAZMAT
+108. LOTO (Log Out Tag Out)
+109. Coating
+110. Painting
+111. Painter
+112. Blasting
+113. Blaster
+114. Supply Chain Management
+115. Management Gudang
+116. Blasting & Coating
+117. Authorizer Gas Tester
+118. K3 Gas Deteksi
+119. DDT (Defensive Driving Training)
+120. Operator K3 Migas
+121. BHD (Bantuan Hidup Dasar)
+122. Pengawas K3 Migas
+123. Penanggung Jawab Operasional Pertama (POP)
+124. Penanggung Jawab Operasional Madya (POM)
+125. Penanggung Jawab Operasional Utama (POU)
+126. Insiden Investigator
+127. POPAL (Penanggungjawab Operasional Pengolahan Air Limbah)
+128. PPPA (Penanggungjawab Pengendalian Pencemaran Air)
+129. PPPU (Penanggungjawab Pengendalian Pencemaran Udara)
+130. POIPPU (Operator Pengendalian Pencemaran Udara)
+131. PLB3 (Penanggung Jawab Pengelolaan B3)
+132. OLB3 (Operator Pengelola Limbah B3)
+133. PCUA (Pengambil Contoh Uji Air)
+134. Manajemen Risiko Madya
+135. Manajemen Risiko Utama
+136. Sea Survival HUET BOSIET & T-BOSIET
+137. Compressor
+138. Drilling
+139. Advance Fire Fighting
+140. Perkapalan
+141. NDT (Non Destructive Test)
+142. K3 Pertambangan
+143. Oil Spill Response
+144. Pemberdayaan Masyarakat
+145. Plate Welder
+146. Welding Inspector
+147. PLC (Programmable Logic Controller)
+148. Teknisi AC
+149. Teknisi Scaffolding
+150. Operator Scaffolding
+151. Pengawas Scaffolding
+152. Penyelamat Ruang Terbatas
+153. Fire Rescue
+154. Laboratorium
+155. SPBU
+156. Tukang Batu
+157. Tukang Kayu
+158. Fumigasi
+159. Manager Building
+160. Staff HRD
+161. Manager HRD
+162. Bimtek Desa
+163. Bimtek Keuangan
+164. Mooring / Unmooring Master
+165. Loading Master
+166. Barge Master
+167. K3 Offshore
+168. K3 Onshore
+169. HAZOP
+170. Akuntansi
+171. QC (Quality Control)
+172. Leadership
+173. Supervisory
+174. Professional Selling Skill
+175. HSE Shipping
+176. Higiene Industri Muda (HIMU)
+177. Higiene Industri Madya (HIMA)
+178. Pengoperasian Alat Angkut (Underground Truck)
+179. INSPEKTUR GENSET
+180. OPERATOR JIB CRANE
+181. Pertanian
+182. Kelapa Sawit
+183. Perkebunan
+184. Manggala Agni
+185. Kehutanan
+186. PLATFORM OFFSHORE
+187. Kelautan
+188. Manajemen
+189. Metalurgi
+190. Trafo
+191. Kendaraan Laut Darat dan Udara
+192. SCADA
+193. AUTOCAD
+194. Pasca Sekolah
+195. 7 Habits
+196. CSMS
+197. ISO 22000
+198. ISO 9001
+199. ISO 14001
+200. ISO 37001
+201. ISO 37009
+202. ISO 26000
+203. ISO 19011
+204. ISO 19600
+205. ISO 20121
+206. NEBOSH
+207. Korosi Perkaratan Alat
+208. Food Handler
+209. Operator K3 Mesin
+210. DDC (Defensive Driving Course)
+211. Operator Penggerak Mula Kelas 1
+212. Operator Penggerak Mula Kelas 2
+213. Geoteknik
+214. Jalan dan Jembatan
+215. Manajemen 5S/5R
+216. DRONE
+217. Data Analyst
+218. Data Center
+219. Asbes
+220. Mercury
+221. Training Rumah Sakit
+222. Training Puskesmas
+223. Engineering
+224. Maintenance
+225. Jasa Lingkungan Karbon
+226. Vibrasi
+227. Cathodic Protection
+228. JASA :
+229. Jasa UKL-UPL AMDAL PERTEK RINTEK UJI LINGKUNGAN
+230. Jasa Uji Emisi
+231. Jasa Sertifikat Laik Fungsi (SLF)
+232. Nomor Induk Data Instalasi (NIDI)
+233. Jasa Sertifikat Laik Operasi (SLO)
+234. JASA RIKSA UJI SILO (SURAT IZIN LAYAK OPERASI) SIA (SURAT IZIN ALAT)
+235. JASA SILO (SURAT IZIN LAYAK OPERASI) RIKSA UJI SIA (SURAT IZIN ALAT)
+236. JASA SIA (SURAT IZIN ALAT) SILO (SURAT IZIN LAYAK OPERASI) RIKSA UJI
+237. Jasa Riksa Uji Alat
+238. Jasa SILO (Surat Izin Layak Operasi)
+239. Jasa SIA (Surat Izin Alat)
+240. Jasa Transportasi & Pengelolaan Limbah B3
+241. Jasa Audit Keuangan Perusahaan
+242. Jasa Kajian Safety Culture Maturity Level
+243. Jasa Kajian Fire Risk Asessment
+244. Jasa Kajian Lingkungan
+245. Jasa Kajian Transportasi
+246. Jasa Kajian Maritim
+247. Jasa Kajian Budaya Kerja Perusahaan
+248. Jasa Kajian Kesehatan
+249. Jasa Kajian Ekonomi
+250. Jasa Kajian Sosial
+251. Jasa Kajian Pendidikan
+252. Jasa Penyusunan Dokumen Studi Kelayakan Bisnis/Usaha
+253. Jasa Penyusunan Kajian Tarif Medis & Non Medis Rumah Sakit BLUD RSUD
+254. Jasa Publikasi Jurnal Internasional Scopus
+255. ⁠Jasa Publikasi Jurnal Sinta 1, 2, 3, 4 & 5
+256. Jasa Pembuatan Akun LPSE
+257. Jasa Lapor LKPM
+258. Jasa Lapor Rups
+259. Jasa ISO 19650 BIM
+260. Jasa ISO 50001 Sistem Manajemen Energi (EnMS)
+261. Jasa ISO 9001, 14001 dan 45001
+262. Jasa ISO 22000, HACCP, GMP dan FSSC
+263. Jasa SBU Konstruksi, SBU Kelistrikan, SBU Konsultan, SBU KADIN
+264. Jasa Pengurusan Sertifikat Standar atau IUJK
+265. Jasa SKK/SKA/SKT
+266. Jasa SERKOM
+267. Jasa Pengurusan PKKPR
+268. Jasa INU (Izin Niaga Umum)
+269. Jasa Izin Pengangkutan Migas
+270. Jasa SPDA CIVD
+271. Jasa SIUPKK (KEAGENAN KAPAL) Free ISO 9001
+272. Jasa SIUJPT (Surat Izin Usaha Jasa Pengurusan Transportasi) KBLI 52291
+273. Jasa Sertifikat HACCP

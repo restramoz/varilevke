@@ -1,0 +1,1915 @@
+{
+  "source_file": "List Pelatihan-10R1.docx",
+  "classification_method": "Posisi item terhadap penanda JASA : pada hasil ekstraksi",
+  "counts": {
+    "pelatihan": 227,
+    "jasa": 45,
+    "total": 272
+  },
+  "items": [
+    {
+      "source_order": 1,
+      "name": "Ahli K3 Umum",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 2,
+      "name": "Confined Space Madya",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 3,
+      "name": "Confined Space Utama",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 4,
+      "name": "Confined Space Rescue",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 5,
+      "name": "Auditor SMK3",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 6,
+      "name": "Operator Forklift Kelas 1",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 7,
+      "name": "Operator Forklift Kelas 2",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 8,
+      "name": "Operator Forklift Kelas 3",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 9,
+      "name": "SIO Operator Alat Berat",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 10,
+      "name": "SIO Excavator",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 11,
+      "name": "SIO Bulldozer",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 12,
+      "name": "SIO Vibro",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 13,
+      "name": "SIO Dump Truck",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 14,
+      "name": "SIO Wheel Loader",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 15,
+      "name": "SIO Motor Grader",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 16,
+      "name": "SIO Compactor",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 17,
+      "name": "SIO Telehandler",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 18,
+      "name": "SIO Rig Drilling",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 19,
+      "name": "Drilling Machine",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 20,
+      "name": "Mekanik Drilling",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 21,
+      "name": "Perawatan Sumur Drilling",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 22,
+      "name": "Operator Menara Drilling",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 23,
+      "name": "Workover Drilling",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 24,
+      "name": "Operator Trailer",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 25,
+      "name": "Lifting",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 26,
+      "name": "TOT (Train of Trainer)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 27,
+      "name": "Mining Training",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 28,
+      "name": "Kelistrikan",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 29,
+      "name": "Teknisi Instrumentasi",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 30,
+      "name": "Reklamasi Pertambangan",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 31,
+      "name": "Teknisi Survei (Juru Ukur)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 32,
+      "name": "Telekomunikasi",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 33,
+      "name": "Bekerja di Ketinggian",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 34,
+      "name": "Operator Gondola",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 35,
+      "name": "Dasar K3",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 36,
+      "name": "MEP (Mechanical Electrical Plumbing)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 37,
+      "name": "Operator Lifter",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 38,
+      "name": "Operator Manlift",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 39,
+      "name": "Operator Boomlift",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 40,
+      "name": "Operator Skylift",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 41,
+      "name": "Operator Scissor Lift",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 42,
+      "name": "Operator Pallet Mover",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 43,
+      "name": "Operator Liftstacker",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 44,
+      "name": "Operator Reachstacker",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 45,
+      "name": "Operator Tower Crane",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 46,
+      "name": "Overhead Crane",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 47,
+      "name": "Mobile Crane",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 48,
+      "name": "Pedestal Crane",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 49,
+      "name": "Operator Pita Transport (Conveyor)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 50,
+      "name": "Basic First Aid",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 51,
+      "name": "Basic Fire Fighting",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 52,
+      "name": "Rigger (Juru Ikat)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 53,
+      "name": "Asisten Rigger",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 54,
+      "name": "Operator K3 Cargo Hoist Crane Kelas 3 (Lift Barang)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 55,
+      "name": "Pesawat Angkat & Pesawat Angkut (PAPA)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 56,
+      "name": "Lift",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 57,
+      "name": "Eskalator",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 58,
+      "name": "Elevator",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 59,
+      "name": "Operator Genset",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 60,
+      "name": "Turbin Uap & Gas",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 61,
+      "name": "Operator Mesin Produksi & Perkakas",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 62,
+      "name": "Operator Tanur",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 63,
+      "name": "Operator Pesawat Tenaga & Produksi (PTP)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 64,
+      "name": "Pesawat Uap Boiler Kelas 1",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 65,
+      "name": "Pesawat Uap Boiler Kelas 2",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 66,
+      "name": "Teknisi Bejana Tekan & Tangki Timbun",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 67,
+      "name": "Ahli Bejana Tekan & Tangki Timbun",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 68,
+      "name": "Petugas P3K",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 69,
+      "name": "Gantry Crane",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 70,
+      "name": "First Aider",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 71,
+      "name": "K3 Rumah Sakit",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 72,
+      "name": "Hiperkes Paramedic / Perawat",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 73,
+      "name": "HIPERKES DOKTER",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 74,
+      "name": "K3 Kebakaran DAMKAR DCBA",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 75,
+      "name": "Ahli K3 Kimia",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 76,
+      "name": "Petugas K3 Kimia",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 77,
+      "name": "Truck Crane",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 78,
+      "name": "Operator Dongkrak",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 79,
+      "name": "Ahli K3 Muda Lingkungan Kerja",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 80,
+      "name": "K3 Ruang Terbatas",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 81,
+      "name": "Teknisi K3 Listrik",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 82,
+      "name": "Ahli K3 Listrik",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 83,
+      "name": "Kelistrikan Gedung",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 84,
+      "name": "Kelistrikan Kendaraan",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 85,
+      "name": "Manajemen Gudang",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 86,
+      "name": "K3 Konstruksi Muda",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 87,
+      "name": "K3 Konstruksi Madya",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 88,
+      "name": "K3 Konstruksi Utama",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 89,
+      "name": "Perancah (Scaffolding)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 90,
+      "name": "Juru Las (Welder)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 91,
+      "name": "Tenaga Kerja Bangunan Tinggi (TKBT) Tingkat 1",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 92,
+      "name": "Tenaga Kerja Bangunan Tinggi (TKBT) Tingkat 2",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 93,
+      "name": "Tenaga Kerja Pada Ketinggian (TKPK) Tingkat 1",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 94,
+      "name": "Tenaga Kerja Pada Ketinggian (TKPK) Tingkat 2",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 95,
+      "name": "WAH (Working at Height)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 96,
+      "name": "Pipe Fitter",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 97,
+      "name": "Welder GMAW",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 98,
+      "name": "Welder FCAW",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 99,
+      "name": "Welder GTAW",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 100,
+      "name": "Welder SMAW",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 101,
+      "name": "H2S",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 102,
+      "name": "JSA (Job Safety Analysis)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 103,
+      "name": "ERGONOMI",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 104,
+      "name": "PERMIT TO WORK",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 105,
+      "name": "Safety Officer",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 106,
+      "name": "HACCP (Hazard Analysis Critical Control Point)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 107,
+      "name": "HAZMAT",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 108,
+      "name": "LOTO (Log Out Tag Out)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 109,
+      "name": "Coating",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 110,
+      "name": "Painting",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 111,
+      "name": "Painter",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 112,
+      "name": "Blasting",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 113,
+      "name": "Blaster",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 114,
+      "name": "Supply Chain Management",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 115,
+      "name": "Management Gudang",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 116,
+      "name": "Blasting & Coating",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 117,
+      "name": "Authorizer Gas Tester",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 118,
+      "name": "K3 Gas Deteksi",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 119,
+      "name": "DDT (Defensive Driving Training)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 120,
+      "name": "Operator K3 Migas",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 121,
+      "name": "BHD (Bantuan Hidup Dasar)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 122,
+      "name": "Pengawas K3 Migas",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 123,
+      "name": "Penanggung Jawab Operasional Pertama (POP)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 124,
+      "name": "Penanggung Jawab Operasional Madya (POM)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 125,
+      "name": "Penanggung Jawab Operasional Utama (POU)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 126,
+      "name": "Insiden Investigator",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 127,
+      "name": "POPAL (Penanggungjawab Operasional Pengolahan Air Limbah)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 128,
+      "name": "PPPA (Penanggungjawab Pengendalian Pencemaran Air)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 129,
+      "name": "PPPU (Penanggungjawab Pengendalian Pencemaran Udara)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 130,
+      "name": "POIPPU (Operator Pengendalian Pencemaran Udara)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 131,
+      "name": "PLB3 (Penanggung Jawab Pengelolaan B3)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 132,
+      "name": "OLB3 (Operator Pengelola Limbah B3)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 133,
+      "name": "PCUA (Pengambil Contoh Uji Air)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 134,
+      "name": "Manajemen Risiko Madya",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 135,
+      "name": "Manajemen Risiko Utama",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 136,
+      "name": "Sea Survival HUET BOSIET & T-BOSIET",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 137,
+      "name": "Compressor",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 138,
+      "name": "Drilling",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 139,
+      "name": "Advance Fire Fighting",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 140,
+      "name": "Perkapalan",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 141,
+      "name": "NDT (Non Destructive Test)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 142,
+      "name": "K3 Pertambangan",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 143,
+      "name": "Oil Spill Response",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 144,
+      "name": "Pemberdayaan Masyarakat",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 145,
+      "name": "Plate Welder",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 146,
+      "name": "Welding Inspector",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 147,
+      "name": "PLC (Programmable Logic Controller)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 148,
+      "name": "Teknisi AC",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 149,
+      "name": "Teknisi Scaffolding",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 150,
+      "name": "Operator Scaffolding",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 151,
+      "name": "Pengawas Scaffolding",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 152,
+      "name": "Penyelamat Ruang Terbatas",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 153,
+      "name": "Fire Rescue",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 154,
+      "name": "Laboratorium",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 155,
+      "name": "SPBU",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 156,
+      "name": "Tukang Batu",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 157,
+      "name": "Tukang Kayu",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 158,
+      "name": "Fumigasi",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 159,
+      "name": "Manager Building",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 160,
+      "name": "Staff HRD",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 161,
+      "name": "Manager HRD",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 162,
+      "name": "Bimtek Desa",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 163,
+      "name": "Bimtek Keuangan",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 164,
+      "name": "Mooring / Unmooring Master",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 165,
+      "name": "Loading Master",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 166,
+      "name": "Barge Master",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 167,
+      "name": "K3 Offshore",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 168,
+      "name": "K3 Onshore",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 169,
+      "name": "HAZOP",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 170,
+      "name": "Akuntansi",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 171,
+      "name": "QC (Quality Control)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 172,
+      "name": "Leadership",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 173,
+      "name": "Supervisory",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 174,
+      "name": "Professional Selling Skill",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 175,
+      "name": "HSE Shipping",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 176,
+      "name": "Higiene Industri Muda (HIMU)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 177,
+      "name": "Higiene Industri Madya (HIMA)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 178,
+      "name": "Pengoperasian Alat Angkut (Underground Truck)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 179,
+      "name": "INSPEKTUR GENSET",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 180,
+      "name": "OPERATOR JIB CRANE",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 181,
+      "name": "Pertanian",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 182,
+      "name": "Kelapa Sawit",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 183,
+      "name": "Perkebunan",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 184,
+      "name": "Manggala Agni",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 185,
+      "name": "Kehutanan",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 186,
+      "name": "PLATFORM OFFSHORE",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 187,
+      "name": "Kelautan",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 188,
+      "name": "Manajemen",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 189,
+      "name": "Metalurgi",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 190,
+      "name": "Trafo",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 191,
+      "name": "Kendaraan Laut Darat dan Udara",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 192,
+      "name": "SCADA",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 193,
+      "name": "AUTOCAD",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 194,
+      "name": "Pasca Sekolah",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 195,
+      "name": "7 Habits",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 196,
+      "name": "CSMS",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 197,
+      "name": "ISO 22000",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 198,
+      "name": "ISO 9001",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 199,
+      "name": "ISO 14001",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 200,
+      "name": "ISO 37001",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 201,
+      "name": "ISO 37009",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 202,
+      "name": "ISO 26000",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 203,
+      "name": "ISO 19011",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 204,
+      "name": "ISO 19600",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 205,
+      "name": "ISO 20121",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 206,
+      "name": "NEBOSH",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 207,
+      "name": "Korosi Perkaratan Alat",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 208,
+      "name": "Food Handler",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 209,
+      "name": "Operator K3 Mesin",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 210,
+      "name": "DDC (Defensive Driving Course)",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 211,
+      "name": "Operator Penggerak Mula Kelas 1",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 212,
+      "name": "Operator Penggerak Mula Kelas 2",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 213,
+      "name": "Geoteknik",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 214,
+      "name": "Jalan dan Jembatan",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 215,
+      "name": "Manajemen 5S/5R",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 216,
+      "name": "DRONE",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 217,
+      "name": "Data Analyst",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 218,
+      "name": "Data Center",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 219,
+      "name": "Asbes",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 220,
+      "name": "Mercury",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 221,
+      "name": "Training Rumah Sakit",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 222,
+      "name": "Training Puskesmas",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 223,
+      "name": "Engineering",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 224,
+      "name": "Maintenance",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 225,
+      "name": "Jasa Lingkungan Karbon",
+      "category": "pelatihan",
+      "review_required": true,
+      "review_note": "Nama mengandung kata 'Jasa', tetapi berada sebelum penanda JASA pada dokumen sumber. Jangan ubah kategori tanpa konfirmasi."
+    },
+    {
+      "source_order": 226,
+      "name": "Vibrasi",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 227,
+      "name": "Cathodic Protection",
+      "category": "pelatihan",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 1,
+      "name": "Jasa UKL-UPL AMDAL PERTEK RINTEK UJI LINGKUNGAN",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 2,
+      "name": "Jasa Uji Emisi",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 3,
+      "name": "Jasa Sertifikat Laik Fungsi (SLF)",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 4,
+      "name": "Nomor Induk Data Instalasi (NIDI)",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 5,
+      "name": "Jasa Sertifikat Laik Operasi (SLO)",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 6,
+      "name": "JASA RIKSA UJI SILO (SURAT IZIN LAYAK OPERASI) SIA (SURAT IZIN ALAT)",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 7,
+      "name": "JASA SILO (SURAT IZIN LAYAK OPERASI) RIKSA UJI SIA (SURAT IZIN ALAT)",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 8,
+      "name": "JASA SIA (SURAT IZIN ALAT) SILO (SURAT IZIN LAYAK OPERASI) RIKSA UJI",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 9,
+      "name": "Jasa Riksa Uji Alat",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 10,
+      "name": "Jasa SILO (Surat Izin Layak Operasi)",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 11,
+      "name": "Jasa SIA (Surat Izin Alat)",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 12,
+      "name": "Jasa Transportasi & Pengelolaan Limbah B3",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 13,
+      "name": "Jasa Audit Keuangan Perusahaan",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 14,
+      "name": "Jasa Kajian Safety Culture Maturity Level",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 15,
+      "name": "Jasa Kajian Fire Risk Asessment",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 16,
+      "name": "Jasa Kajian Lingkungan",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 17,
+      "name": "Jasa Kajian Transportasi",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 18,
+      "name": "Jasa Kajian Maritim",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 19,
+      "name": "Jasa Kajian Budaya Kerja Perusahaan",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 20,
+      "name": "Jasa Kajian Kesehatan",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 21,
+      "name": "Jasa Kajian Ekonomi",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 22,
+      "name": "Jasa Kajian Sosial",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 23,
+      "name": "Jasa Kajian Pendidikan",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 24,
+      "name": "Jasa Penyusunan Dokumen Studi Kelayakan Bisnis/Usaha",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 25,
+      "name": "Jasa Penyusunan Kajian Tarif Medis & Non Medis Rumah Sakit BLUD RSUD",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 26,
+      "name": "Jasa Publikasi Jurnal Internasional Scopus",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 27,
+      "name": "⁠Jasa Publikasi Jurnal Sinta 1, 2, 3, 4 & 5",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 28,
+      "name": "Jasa Pembuatan Akun LPSE",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 29,
+      "name": "Jasa Lapor LKPM",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 30,
+      "name": "Jasa Lapor Rups",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 31,
+      "name": "Jasa ISO 19650 BIM",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 32,
+      "name": "Jasa ISO 50001 Sistem Manajemen Energi (EnMS)",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 33,
+      "name": "Jasa ISO 9001, 14001 dan 45001",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 34,
+      "name": "Jasa ISO 22000, HACCP, GMP dan FSSC",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 35,
+      "name": "Jasa SBU Konstruksi, SBU Kelistrikan, SBU Konsultan, SBU KADIN",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 36,
+      "name": "Jasa Pengurusan Sertifikat Standar atau IUJK",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 37,
+      "name": "Jasa SKK/SKA/SKT",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 38,
+      "name": "Jasa SERKOM",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 39,
+      "name": "Jasa Pengurusan PKKPR",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 40,
+      "name": "Jasa INU (Izin Niaga Umum)",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 41,
+      "name": "Jasa Izin Pengangkutan Migas",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 42,
+      "name": "Jasa SPDA CIVD",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 43,
+      "name": "Jasa SIUPKK (KEAGENAN KAPAL) Free ISO 9001",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 44,
+      "name": "Jasa SIUJPT (Surat Izin Usaha Jasa Pengurusan Transportasi) KBLI 52291",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    },
+    {
+      "source_order": 45,
+      "name": "Jasa Sertifikat HACCP",
+      "category": "jasa",
+      "review_required": false,
+      "review_note": null
+    }
+  ]
+}

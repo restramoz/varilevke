@@ -1,0 +1,440 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+/*
+ * Design tokens — adapted from the TrainingKota "Industrial K3 Command &
+ * Compliance" system (read-only reference), tuned for Varilevke. Palette,
+ * typography and zero-radius geometry follow that system; credential claims
+ * from the reference are intentionally NOT copied (unverifiable here).
+ */
+@theme {
+    --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+
+    --color-regulatory-900: #070d18;
+    --color-regulatory-800: #0b1526;
+    --color-regulatory-700: #0f2038;
+    --color-grid: #1e324e;
+    --color-grid-subtle: #142338;
+    --color-accent: #0d7a5f;
+    --color-accent-bright: #10b981;
+    --color-caution: #d97706;
+    --color-caution-bright: #f59e0b;
+    --color-link: #38bdf8;
+    --color-wa: #25d366;
+    --color-fg: #f1f5f9;
+    --color-muted: #94a3b8;
+    --color-dim: #64748b;
+
+    /* Varilevke deliberate design change: 18px radius on cards, panels, buttons, inputs */
+    --varilevke-radius: 18px;
+    --radius-card: var(--varilevke-radius);
+    --radius-panel: var(--varilevke-radius);
+    --radius-button: var(--varilevke-radius);
+    --radius-input: var(--varilevke-radius);
+    --radius-badge: 4px;
+}
+
+@layer base {
+    html {
+        background-color: var(--color-regulatory-900);
+        color: var(--color-fg);
+        font-family: var(--font-body);
+    }
+
+    body {
+        background-color: var(--color-regulatory-900);
+        color: var(--color-fg);
+        font-family: var(--font-body);
+        min-height: 100vh;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--color-regulatory-900);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-grid);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-accent);
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-accent-bright);
+        outline-offset: 2px;
+    }
+
+    /* Wide article tables never break the page: scroll inside their wrapper. */
+    .article-table-scroll {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    /* Responsive article content improvements */
+    .article-prose {
+        max-width: 100%;
+    }
+
+    .article-prose table {
+        max-width: 100%;
+    }
+
+    /* Ensure tables in article content are responsive */
+    .article-table-scroll .article-prose table {
+        min-width: 600px;
+    }
+
+    @media (max-width: 640px) {
+        .article-prose {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .article-prose h1 {
+            font-size: 1.5rem;
+        }
+
+        .article-prose h2 {
+            font-size: 1.25rem;
+        }
+
+        .article-prose h3 {
+            font-size: 1.1rem;
+        }
+
+        .article-prose table {
+            font-size: 0.8rem;
+        }
+
+        .article-prose th,
+        .article-prose td {
+            padding: 0.5rem 0.75rem;
+        }
+    }
+
+    /* Badge radius exception — keep small/sharp */
+    .badge-accent,
+    .badge-caution,
+    .badge-neutral,
+    .badge-sky {
+        border-radius: var(--radius-badge);
+    }
+}
+
+@layer components {
+    .btn-primary {
+        background-color: var(--color-accent);
+        color: #fff;
+        font-family: var(--font-display);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 12px 24px;
+        border-radius: var(--radius-button);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 150ms ease;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--color-accent-bright);
+        color: #06281e;
+    }
+
+    .btn-secondary {
+        background-color: var(--color-regulatory-700);
+        border: 1px solid var(--color-grid);
+        color: var(--color-fg);
+        font-family: var(--font-display);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 12px 24px;
+        border-radius: var(--radius-button);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 150ms ease, border-color 150ms ease;
+    }
+
+    .btn-secondary:hover {
+        background-color: var(--color-grid-subtle);
+        border-color: var(--color-muted);
+    }
+
+    .btn-whatsapp {
+        background-color: var(--color-regulatory-900);
+        border: 1px solid var(--color-wa);
+        color: var(--color-wa);
+        font-family: var(--font-display);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 12px 24px;
+        border-radius: var(--radius-button);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: center;
+        transition: background-color 150ms ease, color 150ms ease;
+    }
+
+    .btn-whatsapp:hover {
+        background-color: var(--color-wa);
+        color: var(--color-regulatory-900);
+    }
+
+    .badge-accent {
+        background-color: var(--color-regulatory-800);
+        border: 1px solid var(--color-accent);
+        color: var(--color-accent-bright);
+        font-family: var(--font-display);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+    }
+
+    .badge-caution {
+        background-color: var(--color-regulatory-800);
+        border: 1px solid var(--color-caution);
+        color: var(--color-caution-bright);
+        font-family: var(--font-display);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+    }
+
+    .badge-neutral {
+        background-color: var(--color-regulatory-800);
+        border: 1px solid var(--color-grid);
+        color: var(--color-muted);
+        font-family: var(--font-display);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+    }
+
+    .badge-sky {
+        background-color: var(--color-regulatory-800);
+        border: 1px solid var(--color-link);
+        color: var(--color-link);
+        font-family: var(--font-display);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+    }
+
+    .input-k3 {
+        background-color: var(--color-regulatory-800);
+        border: 1px solid var(--color-grid);
+        color: var(--color-fg);
+        font-family: var(--font-body);
+        font-size: 14px;
+        line-height: 44px;
+        padding: 0 14px;
+        border-radius: var(--radius-input);
+        outline: none;
+        transition: border-color 150ms ease;
+        width: 100%;
+    }
+
+    .input-k3:hover {
+        border-color: var(--color-dim);
+    }
+
+    .input-k3:focus {
+        border-color: var(--color-accent);
+        outline-offset: 0;
+    }
+
+    .input-k3::placeholder {
+        color: var(--color-dim);
+    }
+
+    select.input-k3 {
+        padding: 14px;
+    }
+
+    .panel-k3 {
+        background-color: var(--color-regulatory-700);
+        border: 1px solid var(--color-grid);
+        border-radius: var(--radius-panel);
+    }
+
+    .card-k3 {
+        background-color: var(--color-regulatory-800);
+        border: 1px solid var(--color-grid);
+        border-radius: var(--radius-card);
+    }
+
+    .label-caps {
+        font-family: var(--font-display);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    /* Dark long-form prose (reference: TrainingKota .article-prose). */
+    .article-prose {
+        color: #cbd5e1;
+        font-family: var(--font-body);
+        font-size: 15px;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+    }
+
+    .article-prose h1,
+    .article-prose h2,
+    .article-prose h3,
+    .article-prose h4 {
+        font-family: var(--font-display);
+        color: #f8fafc;
+        font-weight: 700;
+    }
+
+    .article-prose h1 {
+        font-size: 2rem;
+        margin: 2rem 0 0.75rem;
+    }
+
+    .article-prose h2 {
+        font-size: 1.5rem;
+        margin: 1.75rem 0 0.75rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--color-grid);
+    }
+
+    .article-prose h3 {
+        font-size: 1.25rem;
+        margin: 1.5rem 0 0.5rem;
+    }
+
+    .article-prose h4 {
+        font-size: 1.05rem;
+        margin: 1.25rem 0 0.5rem;
+    }
+
+    .article-prose p {
+        margin-bottom: 1rem;
+    }
+
+    .article-prose strong {
+        color: #f8fafc;
+        font-weight: 600;
+    }
+
+    .article-prose em {
+        color: #e2e8f0;
+    }
+
+    .article-prose a {
+        color: var(--color-link);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    .article-prose a:hover {
+        color: var(--color-accent-bright);
+    }
+
+    .article-prose ul,
+    .article-prose ol {
+        margin: 1rem 0 1rem 1.5rem;
+    }
+
+    .article-prose ul {
+        list-style: disc;
+    }
+
+    .article-prose li {
+        margin-bottom: 0.5rem;
+    }
+
+    .article-prose blockquote {
+        border-left: 3px solid var(--color-accent);
+        background: var(--color-regulatory-700);
+        color: var(--color-muted);
+        padding: 1rem 1.25rem;
+        margin: 1.5rem 0;
+    }
+
+    .article-prose code {
+        background: #1e293b;
+        color: #f8fafc;
+        padding: 0.125rem 0.375rem;
+        font-size: 0.9em;
+    }
+
+    .article-prose pre {
+        background: #020617;
+        border: 1px solid var(--color-grid);
+        color: #cbd5e1;
+        padding: 1rem;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+    }
+
+    .article-prose table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-size: 0.85rem;
+    }
+
+    .article-prose th {
+        background: var(--color-regulatory-700);
+        color: var(--color-muted);
+        font-family: var(--font-display);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border: 1px solid var(--color-grid);
+    }
+
+    .article-prose td {
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--color-grid-subtle);
+        vertical-align: top;
+    }
+
+    .article-prose img,
+    .article-prose video,
+    .article-prose iframe {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}

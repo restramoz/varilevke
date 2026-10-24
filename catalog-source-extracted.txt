@@ -1,0 +1,273 @@
+Ahli K3 Umum
+Confined Space Madya
+Confined Space Utama
+Confined Space Rescue
+Auditor SMK3
+Operator Forklift Kelas 1
+Operator Forklift Kelas 2
+Operator Forklift Kelas 3
+SIO Operator Alat Berat
+SIO Excavator
+SIO Bulldozer
+SIO Vibro
+SIO Dump Truck
+SIO Wheel Loader
+SIO Motor Grader
+SIO Compactor
+SIO Telehandler
+SIO Rig Drilling
+Drilling Machine
+Mekanik Drilling
+Perawatan Sumur Drilling
+Operator Menara Drilling
+Workover Drilling
+Operator Trailer
+Lifting
+TOT (Train of Trainer)
+Mining Training
+Kelistrikan
+Teknisi Instrumentasi
+Reklamasi Pertambangan
+Teknisi Survei (Juru Ukur)
+Telekomunikasi
+Bekerja di Ketinggian
+Operator Gondola
+Dasar K3
+MEP (Mechanical Electrical Plumbing)
+Operator Lifter
+Operator Manlift
+Operator Boomlift
+Operator Skylift
+Operator Scissor Lift
+Operator Pallet Mover
+Operator Liftstacker
+Operator Reachstacker
+Operator Tower Crane
+Overhead Crane
+Mobile Crane
+Pedestal Crane
+Operator Pita Transport (Conveyor)
+Basic First Aid
+Basic Fire Fighting
+Rigger (Juru Ikat)
+Asisten Rigger
+Operator K3 Cargo Hoist Crane Kelas 3 (Lift Barang)
+Pesawat Angkat & Pesawat Angkut (PAPA)
+Lift
+Eskalator
+Elevator
+Operator Genset
+Turbin Uap & Gas
+Operator Mesin Produksi & Perkakas
+Operator Tanur
+Operator Pesawat Tenaga & Produksi (PTP)
+Pesawat Uap Boiler Kelas 1
+Pesawat Uap Boiler Kelas 2
+Teknisi Bejana Tekan & Tangki Timbun
+Ahli Bejana Tekan & Tangki Timbun
+Petugas P3K
+Gantry Crane
+First Aider
+K3 Rumah Sakit
+Hiperkes Paramedic / Perawat
+HIPERKES DOKTER
+K3 Kebakaran DAMKAR DCBA
+Ahli K3 Kimia
+Petugas K3 Kimia
+Truck Crane
+Operator Dongkrak
+Ahli K3 Muda Lingkungan Kerja
+K3 Ruang Terbatas
+Teknisi K3 Listrik
+Ahli K3 Listrik
+Kelistrikan Gedung
+Kelistrikan Kendaraan
+Manajemen Gudang
+K3 Konstruksi Muda
+K3 Konstruksi Madya
+K3 Konstruksi Utama
+Perancah (Scaffolding)
+Juru Las (Welder)
+Tenaga Kerja Bangunan Tinggi (TKBT) Tingkat 1
+Tenaga Kerja Bangunan Tinggi (TKBT) Tingkat 2
+Tenaga Kerja Pada Ketinggian (TKPK) Tingkat 1
+Tenaga Kerja Pada Ketinggian (TKPK) Tingkat 2
+WAH (Working at Height)
+Pipe Fitter
+Welder GMAW
+Welder FCAW
+Welder GTAW
+Welder SMAW
+H2S
+JSA (Job Safety Analysis)
+ERGONOMI
+PERMIT TO WORK
+Safety Officer
+HACCP (Hazard Analysis Critical Control Point)
+HAZMAT
+LOTO (Log Out Tag Out)
+Coating
+Painting
+Painter
+Blasting
+Blaster
+Supply Chain Management
+Management Gudang
+Blasting & Coating
+Authorizer Gas Tester
+K3 Gas Deteksi
+DDT (Defensive Driving Training)
+Operator K3 Migas
+BHD (Bantuan Hidup Dasar)
+Pengawas K3 Migas
+Penanggung Jawab Operasional Pertama (POP)
+Penanggung Jawab Operasional Madya (POM)
+Penanggung Jawab Operasional Utama (POU)
+Insiden Investigator
+POPAL (Penanggungjawab Operasional Pengolahan Air Limbah)
+PPPA (Penanggungjawab Pengendalian Pencemaran Air)
+PPPU (Penanggungjawab Pengendalian Pencemaran Udara)
+POIPPU (Operator Pengendalian Pencemaran Udara)
+PLB3 (Penanggung Jawab Pengelolaan B3)
+OLB3 (Operator Pengelola Limbah B3)
+PCUA (Pengambil Contoh Uji Air)
+Manajemen Risiko Madya
+Manajemen Risiko Utama
+Sea Survival HUET BOSIET & T-BOSIET
+Compressor
+Drilling
+Advance Fire Fighting
+Perkapalan
+NDT (Non Destructive Test)
+K3 Pertambangan
+Oil Spill Response
+Pemberdayaan Masyarakat
+Plate Welder
+Welding Inspector
+PLC (Programmable Logic Controller)
+Teknisi AC
+Teknisi Scaffolding
+Operator Scaffolding
+Pengawas Scaffolding
+Penyelamat Ruang Terbatas
+Fire Rescue
+Laboratorium
+SPBU
+Tukang Batu
+Tukang Kayu
+Fumigasi
+Manager Building
+Staff HRD
+Manager HRD
+Bimtek Desa
+Bimtek Keuangan
+Mooring / Unmooring Master
+Loading Master
+Barge Master
+K3 Offshore
+K3 Onshore
+HAZOP
+Akuntansi
+QC (Quality Control)
+Leadership
+Supervisory
+Professional Selling Skill
+HSE Shipping
+Higiene Industri Muda (HIMU)
+Higiene Industri Madya (HIMA)
+Pengoperasian Alat Angkut (Underground Truck)
+INSPEKTUR GENSET
+OPERATOR JIB CRANE
+Pertanian
+Kelapa Sawit
+Perkebunan
+Manggala Agni
+Kehutanan
+PLATFORM OFFSHORE
+Kelautan
+Manajemen
+Metalurgi
+Trafo
+Kendaraan Laut Darat dan Udara
+SCADA
+AUTOCAD
+Pasca Sekolah
+7 Habits
+CSMS
+ISO 22000
+ISO 9001
+ISO 14001
+ISO 37001
+ISO 37009
+ISO 26000
+ISO 19011
+ISO 19600
+ISO 20121
+NEBOSH
+Korosi Perkaratan Alat
+Food Handler
+Operator K3 Mesin
+DDC (Defensive Driving Course)
+Operator Penggerak Mula Kelas 1
+Operator Penggerak Mula Kelas 2
+Geoteknik
+Jalan dan Jembatan
+Manajemen 5S/5R
+DRONE
+Data Analyst
+Data Center
+Asbes
+Mercury
+Training Rumah Sakit
+Training Puskesmas
+Engineering
+Maintenance
+Jasa Lingkungan Karbon
+Vibrasi
+Cathodic Protection
+JASA :
+Jasa UKL-UPL AMDAL PERTEK RINTEK UJI LINGKUNGAN
+Jasa Uji Emisi
+Jasa Sertifikat Laik Fungsi (SLF)
+Nomor Induk Data Instalasi (NIDI)
+Jasa Sertifikat Laik Operasi (SLO)
+JASA RIKSA UJI SILO (SURAT IZIN LAYAK OPERASI) SIA (SURAT IZIN ALAT)
+JASA SILO (SURAT IZIN LAYAK OPERASI) RIKSA UJI SIA (SURAT IZIN ALAT)
+JASA SIA (SURAT IZIN ALAT) SILO (SURAT IZIN LAYAK OPERASI) RIKSA UJI
+Jasa Riksa Uji Alat
+Jasa SILO (Surat Izin Layak Operasi)
+Jasa SIA (Surat Izin Alat)
+Jasa Transportasi & Pengelolaan Limbah B3
+Jasa Audit Keuangan Perusahaan
+Jasa Kajian Safety Culture Maturity Level
+Jasa Kajian Fire Risk Asessment
+Jasa Kajian Lingkungan
+Jasa Kajian Transportasi
+Jasa Kajian Maritim
+Jasa Kajian Budaya Kerja Perusahaan
+Jasa Kajian Kesehatan
+Jasa Kajian Ekonomi
+Jasa Kajian Sosial
+Jasa Kajian Pendidikan
+Jasa Penyusunan Dokumen Studi Kelayakan Bisnis/Usaha
+Jasa Penyusunan Kajian Tarif Medis & Non Medis Rumah Sakit BLUD RSUD
+Jasa Publikasi Jurnal Internasional Scopus
+⁠Jasa Publikasi Jurnal Sinta 1, 2, 3, 4 & 5
+Jasa Pembuatan Akun LPSE
+Jasa Lapor LKPM
+Jasa Lapor Rups
+Jasa ISO 19650 BIM
+Jasa ISO 50001 Sistem Manajemen Energi (EnMS)
+Jasa ISO 9001, 14001 dan 45001
+Jasa ISO 22000, HACCP, GMP dan FSSC
+Jasa SBU Konstruksi, SBU Kelistrikan, SBU Konsultan, SBU KADIN
+Jasa Pengurusan Sertifikat Standar atau IUJK
+Jasa SKK/SKA/SKT
+Jasa SERKOM
+Jasa Pengurusan PKKPR
+Jasa INU (Izin Niaga Umum)
+Jasa Izin Pengangkutan Migas
+Jasa SPDA CIVD
+Jasa SIUPKK (KEAGENAN KAPAL) Free ISO 9001
+Jasa SIUJPT (Surat Izin Usaha Jasa Pengurusan Transportasi) KBLI 52291
+Jasa Sertifikat HACCP

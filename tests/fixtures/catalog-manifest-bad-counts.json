@@ -1,0 +1,32 @@
+{
+    "source_file": "fixture-source",
+    "classification_method": "test fixture",
+    "counts": {
+        "pelatihan": 2,
+        "jasa": 1,
+        "total": 3
+    },
+    "items": [
+        {
+            "source_order": 1,
+            "name": "Pelatihan Fiktif A",
+            "category": "pelatihan",
+            "review_required": false,
+            "review_note": null
+        },
+        {
+            "source_order": 2,
+            "name": "Pelatihan Fiktif B",
+            "category": "pelatihan",
+            "review_required": false,
+            "review_note": null
+        },
+        {
+            "source_order": 3,
+            "name": "Pelatihan Fiktif C",
+            "category": "pelatihan",
+            "review_required": false,
+            "review_note": null
+        }
+    ]
+}
