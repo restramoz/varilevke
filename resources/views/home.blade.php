@@ -85,7 +85,7 @@
                                 @foreach ($cityOptions as $option)
                                     <option value="{{ $option['url'] }}">{{ $option['label'] }}</option>
                                 @endforeach
-                                <option value="{{ route('regional.cities') }}">Lihat Semua Wilayah &rarr;</option>
+                                <option value="{{ route('regional.cities') }}">Lihat Semua Wilayah →</option>
                             </select>
                         </div>
 
@@ -143,7 +143,7 @@
                     </div>
                     <div class="pt-6 mt-6 border-t border-grid">
                         <a href="{{ route('catalog.index', ['category' => $pillar['category']]) }}" class="btn-primary w-full text-xs py-2.5 text-center">
-                            Lihat Semua {{ $pillar['count'] }} Program &rarr;
+                            Lihat Semua {{ $pillar['count'] }} Program →
                         </a>
                     </div>
                 </div>
@@ -307,12 +307,12 @@ function toggleProvince(index) {
                     <a href="{{ route('articles.show', $article) }}">{{ $article->title }}</a>
                 </h4>
                 <p class="text-muted text-sm flex-grow mt-2">{{ $article->metaDescription() }}</p>
-                <a href="{{ route('articles.show', $article) }}" class="mt-3 btn-primary text-xs py-1.5 text-center">Baca Selengkapnya &rarr;</a>
+                <a href="{{ route('articles.show', $article) }}" class="mt-3 btn-primary text-xs py-1.5 text-center">Baca Selengkapnya →</a>
             </div>
             @endforeach
         </div>
         <div class="mt-6">
-            <a href="{{ route('articles.index') }}" class="btn-secondary text-xs py-2 px-4">Semua Artikel &rarr;</a>
+            <a href="{{ route('articles.index') }}" class="btn-secondary text-xs py-2 px-4">Semua Artikel →</a>
         </div>
     </div>
 </section>

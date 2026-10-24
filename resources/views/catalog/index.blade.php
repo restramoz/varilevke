@@ -164,7 +164,7 @@
                             <span class="text-[11px] uppercase font-bold">{{ $item->category === 'pelatihan' ? 'Pelatihan' : 'Jasa' }}</span>
                         </div>
                         <a href="{{ route($showRoute, $showParams($item)) }}" class="btn-primary text-xs py-2 px-3.5">
-                            Detail Layanan &rarr;
+                            Detail Layanan →
                         </a>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
                 Pelaksanaan {{ ucfirst($category) }} di Wilayah Pilihan Anda
             </h3>
             <a href="{{ route('home') }}#widget-wilayah" class="text-xs text-link font-display hover:underline">
-                Lihat Semua {{ $countCities ?? '500+' }} Wilayah &rarr;
+                Lihat Semua {{ $countCities ?? '500+' }} Wilayah →
             </a>
         </div>
 
@@ -211,7 +211,7 @@
             @endphp
             @foreach($hubCities as $hub)
                 <a href="{{ route('regional.city', $hub) }}" class="px-3 py-1.5 bg-regulatory-900 border border-grid hover:border-accent text-fg hover:text-accent-bright text-xs font-display uppercase">
-                    {{ ucfirst($category) }} di {{ $hub->name }} &rarr;
+                    {{ ucfirst($category) }} di {{ $hub->name }} →
                 </a>
             @endforeach
         </div>
@@ -226,7 +226,7 @@
                 Wilayah Lainnya di {{ $city->province }}
             </h3>
             <a href="{{ route('regional.cities') }}" class="text-xs text-link font-display hover:underline">
-                Lihat Semua Wilayah &rarr;
+                Lihat Semua Wilayah →
             </a>
         </div>
 
@@ -241,7 +241,7 @@
             @endphp
             @foreach($otherCities as $other)
                 <a href="{{ route('regional.city.catalog.index', ['city' => $other->slug, 'category' => $category]) }}" class="px-3 py-1.5 bg-regulatory-900 border border-grid hover:border-accent text-fg hover:text-accent-bright text-xs font-display uppercase">
-                    {{ ucfirst($category) }} di {{ $other->name }} &rarr;
+                    {{ ucfirst($category) }} di {{ $other->name }} →
                 </a>
             @endforeach
         </div>

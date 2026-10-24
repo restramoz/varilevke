@@ -443,7 +443,7 @@
                             </div>
 
                             <button type="submit" class="btn-primary w-full py-3 text-xs tracking-wider">
-                                Kirim Permohonan via WA &rarr;
+                                Kirim Permohonan via WA →
                             </button>
                         </form>
                     </div>
@@ -471,9 +471,9 @@
                         <h2 class="label-caps mb-2 text-xs uppercase text-fg">Atas kategori ini</h2>
                         <a href="{{ route($indexRoute, $indexRouteParams) }}" class="text-sm text-link hover:underline">
                             @if ($hasCity)
-                                Lihat katalog {{ $item->category }} {{ $pageRegion !== '' && $hasKecamatan ? 'di ' . $pageRegion : 'di ' . $city->label() }} &rarr;
+                                Lihat katalog {{ $item->category }} {{ $pageRegion !== '' && $hasKecamatan ? 'di ' . $pageRegion : 'di ' . $city->label() }} →
                             @else
-                                Lihat seluruh katalog {{ $item->category }} &rarr;
+                                Lihat seluruh katalog {{ $item->category }} →
                             @endif
                         </a>
                         @if ($nonPublished)

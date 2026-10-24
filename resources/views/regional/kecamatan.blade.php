@@ -152,7 +152,7 @@
                                 Detail Layanan
                             </a>
                             <a href="{{ route('regional.kecamatan.catalog.index', ['city' => $kecamatan->city->slug, 'kecamatan' => $kecamatan->slug, 'category' => $srv->category]) }}" class="text-xs font-display text-dim hover:text-fg">
-                                Katalog kecamatan &rarr;
+                                Katalog kecamatan →
                             </a>
                         </div>
                     </li>
@@ -252,7 +252,7 @@
                                         {{ $relArticle->published_at->format('d M Y') }}
                                     </span>
                                     <a href="{{ route('articles.show', $relArticle->slug) }}" class="text-accent-bright text-xs font-bold hover:underline">
-                                        Baca Selengkapnya &rarr;
+                                        Baca Selengkapnya →
                                     </a>
                                 </div>
                             </div>
@@ -281,13 +281,13 @@
                     Kecamatan Lainnya di {{ $kecamatan->city->label() }}
                 </h2>
                 <a href="{{ route('regional.city', $kecamatan->city) }}" class="text-xs font-display text-link hover:underline uppercase">
-                    Halaman {{ $kecamatan->city->label() }} &rarr;
+                    Halaman {{ $kecamatan->city->label() }} →
                 </a>
             </div>
             <div class="flex flex-wrap gap-2">
                 @foreach($siblingKecamatans as $sibling)
                     <a href="{{ route('regional.kecamatan', [$kecamatan->city, $sibling]) }}" class="px-3 py-1.5 bg-regulatory-800 border border-grid hover:border-accent text-muted hover:text-fg text-xs font-display uppercase rounded-card">
-                        {{ $sibling->name }} &rarr;
+                        {{ $sibling->name }} →
                     </a>
                 @endforeach
             </div>

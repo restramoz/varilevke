@@ -32,15 +32,15 @@
 
     <!-- Breadcrumb Navigation -->
     <nav aria-label="Breadcrumb" class="bg-regulatory-800 border-b border-grid py-3 font-display text-xs text-muted">
-        <ol class="max-w-7xl mx-auto flex items-center gap-2 px-4 lg:px-8">
-            <li><a href="{{ route('home') }}" class="hover:text-fg">Beranda</a></li>
-            <li aria-hidden="true" class="text-grid">/</li>
-            <li class="min-w-0">
-                <a href="{{ route('articles.index') }}" class="hover:text-fg">Artikel</a>
+        <ol class="max-w-7xl mx-auto flex flex-wrap items-center gap-2 px-4 lg:px-8">
+            <li class="shrink-0"><a href="{{ route('home') }}" class="hover:text-fg">Beranda</a></li>
+            <li aria-hidden="true" class="text-grid shrink-0">/</li>
+            <li class="min-w-0 shrink-1">
+                <a href="{{ route('articles.index') }}" class="hover:text-fg truncate block">Artikel</a>
             </li>
-            <li aria-hidden="true" class="text-grid">/</li>
-            <li class="min-w-0">
-                <span class="truncate font-semibold text-accent-bright">{{ $article->title }}</span>
+            <li aria-hidden="true" class="text-grid shrink-0">/</li>
+            <li class="min-w-0 shrink-1">
+                <span class="truncate block font-semibold text-accent-bright">{{ $article->title }}</span>
             </li>
         </ol>
     </nav>
@@ -73,7 +73,7 @@
                     </p>
                 </header>
 
-                <div class="article-table-scroll article-content article-prose" itemprop="articleBody">
+                <div class="article-content article-prose" itemprop="articleBody">
                     {!! $article->content !!}
                 </div>
 

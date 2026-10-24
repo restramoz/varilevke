@@ -210,10 +210,60 @@ Intentional **no-op**. The original state was fundamentally broken (FK to non-ex
 
 ---
 
+## Perbaikan Mobile Article Responsiveness & Responsive Tables (2026-10-24)
+
+### Root Causes Identified
+
+1. **Double table wrapper**: Article template had `.article-table-scroll` on the content wrapper AND the sanitizer (`HtmlSanitizerService::wrapTables()`) wrapped each `<table>` in its own `.article-table-scroll` div — creating nested wrappers that broke the CSS selector.
+
+2. **Broken CSS selector**: `.article-table-scroll .article-prose table` targeted tables where `.article-prose` is a *descendant* of `.article-table-scroll`, but in the template they were the same element — the rule never matched.
+
+3. **`overflow-wrap: anywhere`**: Applied globally to `.article-prose`, causing normal words to break character-by-character on narrow screens instead of wrapping at word boundaries.
+
+4. **Breadcrumb flex container**: Used `flex` without `flex-wrap` and without `shrink-0`/`shrink-1` on children — long breadcrumb labels (article titles) forced horizontal overflow on mobile.
+
+### Fixes Applied
+
+**Files Changed:**
+- `resources/css/app.css` — CSS fixes for tables and prose
+- `resources/views/articles/show.blade.php` — Removed duplicate wrapper, fixed breadcrumb markup
+- `resources/views/components/breadcrumb.blade.php` — Made breadcrumb component mobile-responsive
+
+**CSS Changes (`resources/css/app.css`):**
+- Added `-webkit-overflow-scrolling: touch` to `.article-table-scroll` for smooth iOS scrolling
+- Fixed selector from `.article-table-scroll .article-prose table` → `.article-table-scroll table` (now matches sanitizer-wrapped tables)
+- Changed `.article-prose` `overflow-wrap: anywhere` → `overflow-wrap: break-word` (normal word wrapping, only breaks unbreakable strings)
+
+**Template Changes (`resources/views/articles/show.blade.php`):**
+- Removed `article-table-scroll` class from article content wrapper (sanitizer already wraps each table)
+- Fixed breadcrumb: added `flex-wrap`, `shrink-0` on separators/home link, `shrink-1` + `truncate block` on labels
+
+**Component Changes (`resources/views/components/breadcrumb.blade.php`):**
+- Same responsive breadcrumb fixes applied to reusable component (used by regional pages)
+
+### Verification
+
+- **Unit tests**: `HtmlSanitizerServiceTest` — 8/8 pass (includes table wrapper assertion)
+- **Feature tests**: `PublicPagesTest` — 10/10 pass (article detail renders tables, WhatsApp CTA shows all 4 numbers)
+- **Full suite**: 104/104 tests pass, 611 assertions
+- **Build**: `npm run build` — production assets compiled successfully (78.67 kB CSS)
+- **Sanitizer output verified**: Tables correctly wrapped in `<div class="article-table-scroll"><table>...</table></div>`
+- **WhatsApp CTA verified**: All 4 configured numbers render with correct `wa.me` links and clean display (no malformed characters)
+
+### Behavior After Fix
+
+- **Desktop**: Tables render naturally at full width with comfortable column spacing
+- **Mobile (≤640px)**: Tables wider than viewport get horizontal scroll inside their wrapper (min-width: 600px); page itself never overflows horizontally
+- **Article text**: Headings, paragraphs, long URLs wrap at word boundaries; no character-by-character breaking
+- **Breadcrumbs**: Wrap to multiple lines on narrow screens; long article titles truncate with ellipsis
+- **WhatsApp CTA**: Buttons wrap in flex container; all 4 numbers display correctly
+
+---
+
 ## Perintah operasional
 
 ```bash
-php artisan test                    # suite penuh (81 test)
+php artisan test                    # suite penuh (104 test)
 php artisan catalog:import          # verifikasi katalog idempoten
 php artisan admin:create            # buat/reset admin
 php artisan serve --port=8811       # server dev (sessions DB, sqlite)

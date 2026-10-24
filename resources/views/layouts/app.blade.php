@@ -196,7 +196,7 @@
                                 {{ $city->name }}
                             </a>
                         @endforeach
-                        <a href="{{ route('regional.cities') }}" class="px-2 py-1 bg-regulatory-900 border border-grid text-fg hover:text-accent-bright hover:border-accent text-[11px] font-display uppercase">Semua wilayah &rarr;</a>
+                        <a href="{{ route('regional.cities') }}" class="px-2 py-1 bg-regulatory-900 border border-grid text-fg hover:text-accent-bright hover:border-accent text-[11px] font-display uppercase">Semua wilayah →</a>
                     </div>
                 </div>
 

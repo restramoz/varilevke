@@ -218,10 +218,10 @@
                         </div>
                         <div class="pt-3 mt-3 border-t border-grid-subtle flex items-center justify-between">
                             <a href="{{ route('regional.city.catalog.show', ['city' => $city->slug, 'category' => $serv->category, 'item' => $serv]) }}" class="font-display text-[11px] text-accent-bright hover:underline">
-                                Detail &rarr;
+                                Detail →
                             </a>
                             <a href="{{ route('regional.city.catalog.index', ['city' => $city->slug, 'category' => $serv->category]) }}" class="font-display text-[11px] text-dim hover:text-fg">
-                                Katalog {{ $serv->category }} &rarr;
+                                Katalog {{ $serv->category }} →
                             </a>
                         </div>
                     </li>
@@ -275,7 +275,7 @@
                     </p>
                 </div>
                 <a href="{{ route('articles.index') }}" class="btn-secondary text-xs py-2 px-4">
-                    Semua Artikel &rarr;
+                    Semua Artikel →
                 </a>
             </div>
 
@@ -302,7 +302,7 @@
                                     {{ $relArticle->published_at->format('d M Y') }}
                                 </span>
                                 <a href="{{ route('articles.show', $relArticle->slug) }}" class="text-accent-bright text-xs font-bold hover:underline">
-                                    Baca Selengkapnya &rarr;
+                                    Baca Selengkapnya →
                                 </a>
                             </div>
                         </div>
@@ -396,7 +396,7 @@
                 <h3 class="font-display font-bold text-sm uppercase text-fg">
                     Wilayah Lainnya di {{ $city->province }}
                 </h3>
-                <a href="{{ route('regional.cities') }}" class="text-xs font-display text-link hover:underline uppercase">Semua provinsi &rarr;</a>
+                <a href="{{ route('regional.cities') }}" class="text-xs font-display text-link hover:underline uppercase">Semua provinsi →</a>
             </div>
             <div class="flex flex-wrap gap-2">
                 @php
@@ -409,7 +409,7 @@
                 @endphp
                 @foreach($otherCities as $other)
                     <a href="{{ route('regional.city', $other) }}" class="px-3 py-1.5 bg-regulatory-800 border border-grid hover:border-accent text-muted hover:text-fg text-xs font-display uppercase rounded-card">
-                        {{ $other->name }} &rarr;
+                        {{ $other->name }} →
                     </a>
                 @endforeach
             </div>
